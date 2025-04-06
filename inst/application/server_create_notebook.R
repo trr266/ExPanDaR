@@ -498,7 +498,7 @@ create_nb_code_for_component <- function(comp) {
   if(comp == "end_note") return({
     nb_code <- c(
       "### Note", " ",
-      "This Notebook has been automatically generated using the [ExPanDaR](https://joachim-gassen.github.io/ExPanDaR) package.", " "
+      "This Notebook has been automatically generated using the [ExPanDaR](https://trr266.github.io/ExPanDaR) package.", " "
     )
   })
 

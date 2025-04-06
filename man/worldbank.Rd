@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 Has been collected using the \code{wbstats::wb()} function
  from the World Bank API in Dec 2020.
  The code to generate this data is available in the
- \href{https://github.com/joachim-gassen/ExPanDaR}{github repository} of this package.
+ \href{https://github.com/trr266/ExPanDaR}{github repository} of this package.
  Use in scientific studies is not advised without prior cleaning/checking.
 }
 \usage{

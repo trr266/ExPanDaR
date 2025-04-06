@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="ExPanDaR">
 <title>Using ExPanD for Panel Data Exploration • ExPanDaR</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,12 +13,11 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Using ExPanD for Panel Data Exploration">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Using ExPanD for Panel Data Exploration">
 <meta property="og:description" content="ExPanDaR">
 <meta property="og:image" content="/logo.png">
 <meta name="robots" content="noindex">
@@ -32,304 +32,584 @@
   gtag('config', 'UA-119053376-1');
 </script>
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">ExPanDaR</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.5.3.9000</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
+    <nav class="navbar fixed-top navbar-default navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">ExPanDaR</a>
+
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.5.3.9000</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../index.html">
+    <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="../reference/index.html">Reference</a>
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../news/index.html">News</a>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">News</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li class="dropdown-header">ExPanD</li>
-    <li>
-      <a href="../articles/use_ExPanD.html">Using ExPanD for Panel Data Exploration</a>
-    </li>
-    <li>
-      <a href="../articles/customize_ExPanD.html">Customize ExPanD</a>
-    </li>
-    <li>
-      <a href="../articles/ExPanD_notebook.html">Using the ExPanD Notebook function</a>
-    </li>
-    <li class="divider">
-    <li class="dropdown-header">'ExPanDaR' functions</li>
-    <li>
-      <a href="../articles/ExPanDaR-functions.html">Using the functions of the 'ExPanDaR' package</a>
-    </li>
-  </ul>
+<li class="active nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <h6 class="dropdown-header" data-toc-skip>ExPanD</h6>
+    <a class="dropdown-item" href="../articles/use_ExPanD.html">Using ExPanD for Panel Data Exploration</a>
+    <a class="dropdown-item" href="../articles/customize_ExPanD.html">Customize ExPanD</a>
+    <a class="dropdown-item" href="../articles/ExPanD_notebook.html">Using the ExPanD Notebook function</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>'ExPanDaR' functions</h6>
+    <a class="dropdown-item" href="../articles/ExPanDaR-functions.html">Using the functions of the 'ExPanDaR' package</a>
+  </div>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://www.github.com/joachim-gassen/ExPanDaR">
-    <span class="fas fa-github"></span>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://www.github.com/trr266/ExPanDaR">
+    <span class="fa fa-github"></span>
      
     Code repository
   </a>
 </li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
-      
 
-      </header><script src="use_ExPanD_files/header-attrs-2.6/header-attrs.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Using ExPanD for Panel Data Exploration</h1>
-                        <h4 class="author">Joachim Gassen</h4>
+
+
+<div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>Using ExPanD for Panel Data Exploration</h1>
+                        <h4 data-toc-skip class="author">Joachim
+Gassen</h4>
             
-            <h4 class="date">2021-04-11</h4>
+            <h4 data-toc-skip class="date">2025-04-06</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/joachim-gassen/ExPanDaR/blob/master/vignettes/use_ExPanD.Rmd"><code>vignettes/use_ExPanD.Rmd</code></a></small>
-      <div class="hidden name"><code>use_ExPanD.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="https://github.com/trr266/ExPanDaR/blob/HEAD/vignettes/use_ExPanD.Rmd" class="external-link"><code>vignettes/use_ExPanD.Rmd</code></a></small>
+      <div class="d-none name"><code>use_ExPanD.Rmd</code></div>
     </div>
 
     
     
-<p>ExPanD is a shiny based app building on the functions of the ExPanDaR package. Its purpose is to make panel data exploration fun and easy. Using ExPanD you can</p>
+<p>ExPanD is a shiny based app building on the functions of the ExPanDaR
+package. Its purpose is to make panel data exploration fun and easy.
+Using ExPanD you can</p>
 <ul>
 <li>quickly explore panel data, regardless of its origin,</li>
 <li>prototype simple test designs and verify them out-of sample and</li>
-<li>provide users the opportunity to assess the robustness of your findings without providing them access to the underlying data.</li>
+<li>provide users the opportunity to assess the robustness of your
+findings without providing them access to the underlying data.</li>
 </ul>
-<p>This vignette will guide you through the process of using ExPanD by discussing three use cases. While the first two use macro-economic data to explore the association of gross domestic production (GDP) per capita with life expectancy at birth, the last use case explores the association between financial accounting performance measures and concurrent stock returns.</p>
-<p>If you do not use R you can still use the ExPanD app to explore panel data! In this case, access the hosted variant of the ExPanD app <a href="https://jgassen.shinyapps.io/expand/">here</a> and follow the advice below on how to upload a suitable panel data file for online exploration. No worries: Your data won’t be stored on the server and will be deleted from memory once the connection to the server is closed.</p>
-<div id="starting-expand-to-upload-a-local-file-containing-panel-data" class="section level2">
-<h2 class="hasAnchor">
-<a href="#starting-expand-to-upload-a-local-file-containing-panel-data" class="anchor"></a>Starting ExPanD to upload a local file containing panel data</h2>
-<p>The easiest way to start using ExPanD is to use it with a local data file containing panel data. ExPanD supports Stata, SAS, CSV, Excel and R file formats.</p>
-<p>For using ExPanD from within R, you have to install the ExPanDaR package and start ExPanD.</p>
+<p>This vignette will guide you through the process of using ExPanD by
+discussing three use cases. While the first two use macro-economic data
+to explore the association of gross domestic production (GDP) per capita
+with life expectancy at birth, the last use case explores the
+association between financial accounting performance measures and
+concurrent stock returns.</p>
+<p>If you do not use R you can still use the ExPanD app to explore panel
+data! In this case, access the hosted variant of the ExPanD app <a href="https://jgassen.shinyapps.io/expand/" class="external-link">here</a> and follow the
+advice below on how to upload a suitable panel data file for online
+exploration. No worries: Your data won’t be stored on the server and
+will be deleted from memory once the connection to the server is
+closed.</p>
+<div class="section level2">
+<h2 id="starting-expand-to-upload-a-local-file-containing-panel-data">Starting ExPanD to upload a local file containing panel data<a class="anchor" aria-label="anchor" href="#starting-expand-to-upload-a-local-file-containing-panel-data"></a>
+</h2>
+<p>The easiest way to start using ExPanD is to use it with a local data
+file containing panel data. ExPanD supports Stata, SAS, CSV, Excel and R
+file formats.</p>
+<p>For using ExPanD from within R, you have to install the ExPanDaR
+package and start ExPanD.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"joachim-gassen/ExPanDaR"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://joachim-gassen.github.io/ExPanDaR/">ExPanDaR</a></span><span class="op">)</span>
-
-<span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p>Alternatively, you can simply access the online hosted version of the ExPanD app <a href="https://jgassen.shinyapps.io/expand/">here</a> (no R required).</p>
-<p>After starting ExPanD, you will be greeted with a bare bones file upload dialog.</p>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"joachim-gassen/ExPanDaR"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://trr266.github.io/ExPanDaR/" class="external-link">ExPanDaR</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>Alternatively, you can simply access the online hosted version of the
+ExPanD app <a href="https://jgassen.shinyapps.io/expand/" class="external-link">here</a> (no R
+required).</p>
+<p>After starting ExPanD, you will be greeted with a bare bones file
+upload dialog.</p>
 <p><img src="figures/ExPanD_file_01.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>Now you need a file to explore. Feel free to use whatever you want but for our first use case I will use the well-known <code>gapminder</code> dataset provided by the gapminder package (click <a href="https://www.gapminder.org">here</a> if you do not know the gapminder initiative).</p>
+<p>Now you need a file to explore. Feel free to use whatever you want
+but for our first use case I will use the well-known
+<code>gapminder</code> dataset provided by the gapminder package (click
+<a href="https://www.gapminder.org" class="external-link">here</a> if you do not know the
+gapminder initiative).</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jennybc/gapminder">gapminder</a></span><span class="op">)</span>
-<span class="co"># write.csv(gapminder, file = "gapminder.csv", row.names = FALSE)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">gapminder</span>, <span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 10 x 6</span>
-<span class="co">#&gt;    country     continent  year lifeExp      pop gdpPercap</span>
-<span class="co">#&gt;    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 Afghanistan Asia       1952    28.8  8425333      779.</span>
-<span class="co">#&gt;  2 Afghanistan Asia       1957    30.3  9240934      821.</span>
-<span class="co">#&gt;  3 Afghanistan Asia       1962    32.0 10267083      853.</span>
-<span class="co">#&gt;  4 Afghanistan Asia       1967    34.0 11537966      836.</span>
-<span class="co">#&gt;  5 Afghanistan Asia       1972    36.1 13079460      740.</span>
-<span class="co">#&gt;  6 Afghanistan Asia       1977    38.4 14880372      786.</span>
-<span class="co">#&gt;  7 Afghanistan Asia       1982    39.9 12881816      978.</span>
-<span class="co">#&gt;  8 Afghanistan Asia       1987    40.8 13867957      852.</span>
-<span class="co">#&gt;  9 Afghanistan Asia       1992    41.7 16317921      649.</span>
-<span class="co">#&gt; 10 Afghanistan Asia       1997    41.8 22227415      635.</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jennybc/gapminder" class="external-link">gapminder</a></span><span class="op">)</span></span>
+<span><span class="co"># write.csv(gapminder, file = "gapminder.csv", row.names = FALSE)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">gapminder</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 6</span></span></span>
+<span><span class="co">#&gt;    country     continent  year lifeExp      pop gdpPercap</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>952    28.8  8<span style="text-decoration: underline;">425</span>333      779.</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>957    30.3  9<span style="text-decoration: underline;">240</span>934      821.</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>962    32.0 10<span style="text-decoration: underline;">267</span>083      853.</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>967    34.0 11<span style="text-decoration: underline;">537</span>966      836.</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>972    36.1 13<span style="text-decoration: underline;">079</span>460      740.</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>977    38.4 14<span style="text-decoration: underline;">880</span>372      786.</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>982    39.9 12<span style="text-decoration: underline;">881</span>816      978.</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>987    40.8 13<span style="text-decoration: underline;">867</span>957      852.</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>992    41.7 16<span style="text-decoration: underline;">317</span>921      649.</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Afghanistan Asia       <span style="text-decoration: underline;">1</span>997    41.8 22<span style="text-decoration: underline;">227</span>415      635.</span></span></code></pre></div>
 <p>To use ExPanD, you need the following:</p>
 <ul>
-<li>A panel dataset in long format with at least two numerical variables and without duplicate observations (as identified by the cross-sectional and time-series dimension),</li>
-<li>a variable or a vector of variables within this dataset that identifies the cross-sectional dimension and</li>
-<li>a variable that is coercible to an ordered factor and that identifies (and sorts) the time dimension of your panel.</li>
+<li>A panel dataset in long format with at least two numerical variables
+and without duplicate observations (as identified by the cross-sectional
+and time-series dimension),</li>
+<li>a variable or a vector of variables within this dataset that
+identifies the cross-sectional dimension and</li>
+<li>a variable that is coercible to an ordered factor and that
+identifies (and sorts) the time dimension of your panel.</li>
 </ul>
-<p>As you see, the gapminder file contains country-year data. It is organized in a long format by using <code>country</code> as cross-sectional identifier and <code>year</code> as time-series identifier. Each of the additional variables is then stored in a separate column. It has one factor (<code>continent</code>) and three numerical variables (<code>lifeExp</code>, <code>pop</code> and <code>gdpPercap</code>). So, it complies with the above requirements, assuming that is has no duplicates:</p>
+<p>As you see, the gapminder file contains country-year data. It is
+organized in a long format by using <code>country</code> as
+cross-sectional identifier and <code>year</code> as time-series
+identifier. Each of the additional variables is then stored in a
+separate column. It has one factor (<code>continent</code>) and three
+numerical variables (<code>lifeExp</code>, <code>pop</code> and
+<code>gdpPercap</code>). So, it complies with the above requirements,
+assuming that is has no duplicates:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html">duplicated</a></span><span class="op">(</span><span class="va">gapminder</span><span class="op">[</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"country"</span>, <span class="st">"year"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>
-<span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<p>OK. Use the commented-out <code><a href="https://rdrr.io/r/utils/write.table.html">write.csv()</a></code> function call above to save the CSV file to your system and the file dialog to load it into ExPanD (if you are not using R, you can download the CSV file <a href="https://github.com/joachim-gassen/ExPanDaR/raw/master/vignettes/data/gapminder.csv">here</a>). After uploading the file, two dialog boxes will appear asking you to select the cross-sectional identifier(s) and the time-series identifier.</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/any.html" class="external-link">any</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html" class="external-link">duplicated</a></span><span class="op">(</span><span class="va">gapminder</span><span class="op">[</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"country"</span>, <span class="st">"year"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<p>OK. Use the commented-out <code><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv()</a></code> function call
+above to save the CSV file to your system and the file dialog to load it
+into ExPanD (if you are not using R, you can download the CSV file <a href="https://github.com/joachim-gassen/ExPanDaR/raw/master/vignettes/data/gapminder.csv" class="external-link">here</a>).
+After uploading the file, two dialog boxes will appear asking you to
+select the cross-sectional identifier(s) and the time-series
+identifier.</p>
 <p><img src="figures/ExPanD_file_02.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>Select <code>country</code> as the cross-sectional identifier and <code>year</code> as the time-series identifier. ExPanD will now process the data to display it so that you can start exploring.</p>
+<p>Select <code>country</code> as the cross-sectional identifier and
+<code>year</code> as the time-series identifier. ExPanD will now process
+the data to display it so that you can start exploring.</p>
 </div>
-<div id="starting-expand-with-a-data-frame-containing-panel-data" class="section level2">
-<h2 class="hasAnchor">
-<a href="#starting-expand-with-a-data-frame-containing-panel-data" class="anchor"></a>Starting ExPanD with a data frame containing panel data</h2>
-<p>Alternatively, if you are using R you can bypass the file upload dialog by specifying a data frame and its cross-sectional as well as time-series identifiers.</p>
+<div class="section level2">
+<h2 id="starting-expand-with-a-data-frame-containing-panel-data">Starting ExPanD with a data frame containing panel data<a class="anchor" aria-label="anchor" href="#starting-expand-with-a-data-frame-containing-panel-data"></a>
+</h2>
+<p>Alternatively, if you are using R you can bypass the file upload
+dialog by specifying a data frame and its cross-sectional as well as
+time-series identifiers.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"joachim-gassen/ExPanDaR"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://joachim-gassen.github.io/ExPanDaR/">ExPanDaR</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jennybc/gapminder">gapminder</a></span><span class="op">)</span>
-
-<span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">gapminder</span>, cs_id <span class="op">=</span> <span class="st">"country"</span>, ts_id <span class="op">=</span> <span class="st">"year"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"joachim-gassen/ExPanDaR"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://trr266.github.io/ExPanDaR/" class="external-link">ExPanDaR</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jennybc/gapminder" class="external-link">gapminder</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">gapminder</span>, cs_id <span class="op">=</span> <span class="st">"country"</span>, ts_id <span class="op">=</span> <span class="st">"year"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="exploring-data" class="section level2">
-<h2 class="hasAnchor">
-<a href="#exploring-data" class="anchor"></a>Exploring data</h2>
-<p>Regardless whether you uploaded the gapminder data via the file dialog or specified the data frame in the <code><a href="../reference/ExPanD.html">ExPanD()</a></code> function call, the ExPanD shiny app will start up and look like this.</p>
+<div class="section level2">
+<h2 id="exploring-data">Exploring data<a class="anchor" aria-label="anchor" href="#exploring-data"></a>
+</h2>
+<p>Regardless whether you uploaded the gapminder data via the file
+dialog or specified the data frame in the <code><a href="../reference/ExPanD.html">ExPanD()</a></code> function
+call, the ExPanD shiny app will start up and look like this.</p>
 <p><img src="figures/ExPanD_simple_01.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>As can be seen by the bar chart, the gapminder dataset provides a balanced panel of 142 countries with 12 observations per country. The missing values graph shows no missing data across all variables. When you scroll down, you will see that the dataset contains three numerical variables. Play around with the histogram and the extreme observation table to learn more about these. The time trend graph and the quantile time trend communicate good news: the life expectancy is increasing over time world-wide. You can verify that the same holds true for the population of the sample countries and for their GDP per capita. You will also notice that for the latter two the cross-country distribution widens over time.</p>
-<p>The gapminder dataset is often used to document the strong positive association between GDP per capita and life expectancy. You can see this association in the correlation plot. The blue ellipsoid above (below) the diagonal visualizes the positive Pearson (Spearman) correlation of the two variables. If you are interested in the exact correlation values, hover over the ellipsoid with your mouse.</p>
-<p>The scatter plot and the regression analysis section allow you to explore this association in a little bit more detail. Below you will see a screenshot where I prepared a “Hans Rosling” scatter plot (click <a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen">here</a> if you do not know the name). In addition, I estimated a by region OLS model with country fixed effects and standard errors clustered by country to verify that the association is not just driven by unobservable time-constant country heterogeneity.</p>
+<p>As can be seen by the bar chart, the gapminder dataset provides a
+balanced panel of 142 countries with 12 observations per country. The
+missing values graph shows no missing data across all variables. When
+you scroll down, you will see that the dataset contains three numerical
+variables. Play around with the histogram and the extreme observation
+table to learn more about these. The time trend graph and the quantile
+time trend communicate good news: the life expectancy is increasing over
+time world-wide. You can verify that the same holds true for the
+population of the sample countries and for their GDP per capita. You
+will also notice that for the latter two the cross-country distribution
+widens over time.</p>
+<p>The gapminder dataset is often used to document the strong positive
+association between GDP per capita and life expectancy. You can see this
+association in the correlation plot. The blue ellipsoid above (below)
+the diagonal visualizes the positive Pearson (Spearman) correlation of
+the two variables. If you are interested in the exact correlation
+values, hover over the ellipsoid with your mouse.</p>
+<p>The scatter plot and the regression analysis section allow you to
+explore this association in a little bit more detail. Below you will see
+a screenshot where I prepared a “Hans Rosling” scatter plot (click <a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen" class="external-link">here</a>
+if you do not know the name). In addition, I estimated a by region OLS
+model with country fixed effects and standard errors clustered by
+country to verify that the association is not just driven by
+unobservable time-constant country heterogeneity.</p>
 <p><img src="figures/ExPanD_simple_02.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>Looking at the scatter plot you notice that there are some observations with extremely high GDP per capita that trigger the LOESS smoother line to get a negative slope. If you hover over the dots with your mouse you will see that these are observations from Kuwait. To what extent are our regression results affected by these extreme observations? To figure this out, scroll up and select to winsorize your data at the 1 % level. After doing this, the figure from above now looks like this.</p>
+<p>Looking at the scatter plot you notice that there are some
+observations with extremely high GDP per capita that trigger the LOESS
+smoother line to get a negative slope. If you hover over the dots with
+your mouse you will see that these are observations from Kuwait. To what
+extent are our regression results affected by these extreme
+observations? To figure this out, scroll up and select to winsorize your
+data at the 1 % level. After doing this, the figure from above now looks
+like this.</p>
 <p><img src="figures/ExPanD_simple_03.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>The association has become more robust across regions and the scatter plot now shows a positive association across the complete range of winsorized GDP per capita.</p>
-<p>Continue to play around with your data. Let us assume that at some point you find something that you consider worth preserving so that next time you start ExPanD with the gapminder dataset, it starts directly into the view that you just have. No problem! Just scroll down to the bottom of the page. There, you will find a save dialog (and a load dialog as well, just in case). Save your ExPanD choices to a place that you will remember. The file that will be stored is a plain list, saved as a RDS file. Assuming that you named the file “ExPanD_config.RDS” and stored in your current work directory, you can now start ExPanD right into your favorite analysis by providing this list.</p>
+<p>The association has become more robust across regions and the scatter
+plot now shows a positive association across the complete range of
+winsorized GDP per capita.</p>
+<p>Continue to play around with your data. Let us assume that at some
+point you find something that you consider worth preserving so that next
+time you start ExPanD with the gapminder dataset, it starts directly
+into the view that you just have. No problem! Just scroll down to the
+bottom of the page. There, you will find a save dialog (and a load
+dialog as well, just in case). Save your ExPanD choices to a place that
+you will remember. The file that will be stored is a plain list, saved
+as a RDS file. Assuming that you named the file “ExPanD_config.RDS” and
+stored in your current work directory, you can now start ExPanD right
+into your favorite analysis by providing this list.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ExPanD_config</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="st">"ExPanD_config.RDS"</span><span class="op">)</span>
-<span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">gapminder</span>, cs_id <span class="op">=</span> <span class="st">"country"</span>, ts_id <span class="op">=</span> <span class="st">"year"</span>, config_list <span class="op">=</span> <span class="va">ExPanD_config</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">ExPanD_config</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="st">"ExPanD_config.RDS"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">gapminder</span>, cs_id <span class="op">=</span> <span class="st">"country"</span>, ts_id <span class="op">=</span> <span class="st">"year"</span>, config_list <span class="op">=</span> <span class="va">ExPanD_config</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="defining-additional-variables" class="section level2">
-<h2 class="hasAnchor">
-<a href="#defining-additional-variables" class="anchor"></a>Defining additional variables</h2>
-<p>The gapminder dataset contains only three numerical variables. You might wonder how the association between GDP per capita and life expectancy would look like if you include additional test or control variables. In addition, GDP per capita, as a metric affected by growth processes, is far from being normally distributed. Does the association with life expectancy hold when you log transform it? Time for our second use case that re-examines the above presented association by using data provided by the World Bank.</p>
-<p>The questions of the last paragraph are typical for exploratory data analysis workflows and ExPanD is equipped to handle them. When started in its “advanced mode”, it provides two samples: A base sample and an analysis sample. You can then define additional variables based on the base sample interactively.</p>
-<p>When you call ExPanD without options, it will start into the advanced mode, generating an analysis sample that is identical to the sample that you uploaded. When you start ExPanD by providing it with a data frame at the command line, you decide whether you want to use the “simple” or “advanced” mode. When you prepare a data frame containing variable definitions via the <code>var_def</code> parameter, ExPanD will start in the advanced mode.</p>
-<p>A variable definition file has to contain at least three character columns: <code>var_name</code>, <code>var_def</code> and <code>type</code>. In addition, it can contain a logical column <code>can_be_na</code>. Let’s take a look at the variable definition data frame for the <code>worldbank</code> dataset provided by the ExPanDaR package.</p>
+<div class="section level2">
+<h2 id="defining-additional-variables">Defining additional variables<a class="anchor" aria-label="anchor" href="#defining-additional-variables"></a>
+</h2>
+<p>The gapminder dataset contains only three numerical variables. You
+might wonder how the association between GDP per capita and life
+expectancy would look like if you include additional test or control
+variables. In addition, GDP per capita, as a metric affected by growth
+processes, is far from being normally distributed. Does the association
+with life expectancy hold when you log transform it? Time for our second
+use case that re-examines the above presented association by using data
+provided by the World Bank.</p>
+<p>The questions of the last paragraph are typical for exploratory data
+analysis workflows and ExPanD is equipped to handle them. When started
+in its “advanced mode”, it provides two samples: A base sample and an
+analysis sample. You can then define additional variables based on the
+base sample interactively.</p>
+<p>When you call ExPanD without options, it will start into the advanced
+mode, generating an analysis sample that is identical to the sample that
+you uploaded. When you start ExPanD by providing it with a data frame at
+the command line, you decide whether you want to use the “simple” or
+“advanced” mode. When you prepare a data frame containing variable
+definitions via the <code>var_def</code> parameter, ExPanD will start in
+the advanced mode.</p>
+<p>A variable definition file has to contain at least three character
+columns: <code>var_name</code>, <code>var_def</code> and
+<code>type</code>. In addition, it can contain a logical column
+<code>can_be_na</code>. Let’s take a look at the variable definition
+data frame for the <code>worldbank</code> dataset provided by the
+ExPanDaR package.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">worldbank_var_def</span>, <span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt;           var_name                             var_def    type can_be_na</span>
-<span class="co">#&gt; 1          country                             country   cs_id         0</span>
-<span class="co">#&gt; 2           region                              region  factor         0</span>
-<span class="co">#&gt; 3           income                              income  factor         0</span>
-<span class="co">#&gt; 4             year                                year   ts_id         0</span>
-<span class="co">#&gt; 5             time as.numeric(as.character(year))-1960 numeric         0</span>
-<span class="co">#&gt; 6              gdp                      NY.GDP.MKTP.KD numeric         0</span>
-<span class="co">#&gt; 7       population                         SP.POP.TOTL numeric         0</span>
-<span class="co">#&gt; 8       gdp_capita                      NY.GDP.PCAP.KD numeric         0</span>
-<span class="co">#&gt; 9      extdebt_gni                   DT.DOD.DECT.GN.ZS numeric         1</span>
-<span class="co">#&gt; 10 debtservice_gni                   DT.TDS.DPPG.GN.ZS numeric         1</span></code></pre></div>
-<p><code>var_name</code> contains variable names for the analysis sample and <code>var_def</code> contains the definitions for these variables. The definitions refer to variables contained in the <code>worldbank</code> dataset (which are conforming to the naming convention of the World Bank). Most definitions are just simple 1:1 transformations of the <code>worldbank</code> dataset but, as you can see from the definition for <code>time</code>, you can also use standard R expressions within the scope of the <code>worldbank</code> data frame. For the R experts: Your definition will be evaluated within a <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">dplyr::mutate()</a></code> call on the base data frame grouped by the cross section and ordered by the time-series identifier, so for example that <code>lead()</code> and <code><a href="https://rdrr.io/r/stats/lag.html">lag()</a></code> should work as expected.</p>
-<p>With the <code>type</code> variable you specify the nature of the variable that you just defined. Possible values are <code>cs_id</code>, <code>ts_id</code>, <code>numeric</code>, <code>logical</code>, and <code>factor</code>. They identify cross-sectional identifier(s), the time-series identifier, numerical variables, Boolean (True/False) type variables, and variables to be treated as grouping factors. Note that the data does not have to have the according class but is has to be coercible to it.</p>
-<p>The <code>can_be_na</code> variable can be omitted. If you do not provide it, it will be set to <code>TRUE</code> for all variables besides the cross-sectional and time-series identifiers. In the <code>worldbank_var_def</code> data frame it is set to <code>FALSE</code> for the variables <code>time</code>, <code>gdp</code>, <code>population</code>, and <code>gpd_capita</code>, meaning that only observations with non-missing values for these variables will be included in the analysis dataset.</p>
-<p>By customizing this data frame that you provide to <code><a href="../reference/ExPanD.html">ExPanD()</a></code> via the <code>var_def</code> parameter, you can design the analysis sample as you wish. An alternative and more interactive approach is to define variables interactively while running <code><a href="../reference/ExPanD.html">ExPanD()</a></code>. Let’s try. Run the following code to start ExPanD with the <code>worldbank</code> base data in advanced mode.</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">worldbank_var_def</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt;           var_name                             var_def    type can_be_na</span></span>
+<span><span class="co">#&gt; 1          country                             country   cs_id         0</span></span>
+<span><span class="co">#&gt; 2           region                              region  factor         0</span></span>
+<span><span class="co">#&gt; 3           income                              income  factor         0</span></span>
+<span><span class="co">#&gt; 4             year                                year   ts_id         0</span></span>
+<span><span class="co">#&gt; 5             time as.numeric(as.character(year))-1960 numeric         0</span></span>
+<span><span class="co">#&gt; 6              gdp                      NY.GDP.MKTP.KD numeric         0</span></span>
+<span><span class="co">#&gt; 7       population                         SP.POP.TOTL numeric         0</span></span>
+<span><span class="co">#&gt; 8       gdp_capita                      NY.GDP.PCAP.KD numeric         0</span></span>
+<span><span class="co">#&gt; 9      extdebt_gni                   DT.DOD.DECT.GN.ZS numeric         1</span></span>
+<span><span class="co">#&gt; 10 debtservice_gni                   DT.TDS.DPPG.GN.ZS numeric         1</span></span></code></pre></div>
+<p><code>var_name</code> contains variable names for the analysis sample
+and <code>var_def</code> contains the definitions for these variables.
+The definitions refer to variables contained in the
+<code>worldbank</code> dataset (which are conforming to the naming
+convention of the World Bank). Most definitions are just simple 1:1
+transformations of the <code>worldbank</code> dataset but, as you can
+see from the definition for <code>time</code>, you can also use standard
+R expressions within the scope of the <code>worldbank</code> data frame.
+For the R experts: Your definition will be evaluated within a
+<code><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">dplyr::mutate()</a></code> call on the base data frame grouped by the
+cross section and ordered by the time-series identifier, so for example
+that <code>lead()</code> and <code><a href="https://rdrr.io/r/stats/lag.html" class="external-link">lag()</a></code> should work as
+expected.</p>
+<p>With the <code>type</code> variable you specify the nature of the
+variable that you just defined. Possible values are <code>cs_id</code>,
+<code>ts_id</code>, <code>numeric</code>, <code>logical</code>, and
+<code>factor</code>. They identify cross-sectional identifier(s), the
+time-series identifier, numerical variables, Boolean (True/False) type
+variables, and variables to be treated as grouping factors. Note that
+the data does not have to have the according class but is has to be
+coercible to it.</p>
+<p>The <code>can_be_na</code> variable can be omitted. If you do not
+provide it, it will be set to <code>TRUE</code> for all variables
+besides the cross-sectional and time-series identifiers. In the
+<code>worldbank_var_def</code> data frame it is set to
+<code>FALSE</code> for the variables <code>time</code>,
+<code>gdp</code>, <code>population</code>, and <code>gpd_capita</code>,
+meaning that only observations with non-missing values for these
+variables will be included in the analysis dataset.</p>
+<p>By customizing this data frame that you provide to
+<code><a href="../reference/ExPanD.html">ExPanD()</a></code> via the <code>var_def</code> parameter, you can
+design the analysis sample as you wish. An alternative and more
+interactive approach is to define variables interactively while running
+<code><a href="../reference/ExPanD.html">ExPanD()</a></code>. Let’s try. Run the following code to start ExPanD
+with the <code>worldbank</code> base data in advanced mode.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://joachim-gassen.github.io/ExPanDaR/">ExPanDaR</a></span><span class="op">)</span>
-
-<span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">worldbank</span>, 
-       df_def <span class="op">=</span> <span class="va">worldbank_data_def</span>,
-       var_def <span class="op">=</span> <span class="va">worldbank_var_def</span>,
-       config_list <span class="op">=</span> <span class="va">ExPanD_config_worldbank</span><span class="op">)</span></code></pre></div>
-<p>What you will see is a similar analysis to the gapminder analysis of the first use case but with a more extensive dataset. The scatter plot and the regression analysis are displayed below.</p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://trr266.github.io/ExPanDaR/" class="external-link">ExPanDaR</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">worldbank</span>, </span>
+<span>       df_def <span class="op">=</span> <span class="va">worldbank_data_def</span>,</span>
+<span>       var_def <span class="op">=</span> <span class="va">worldbank_var_def</span>,</span>
+<span>       config_list <span class="op">=</span> <span class="va">ExPanD_config_worldbank</span><span class="op">)</span></span></code></pre></div>
+<p>What you will see is a similar analysis to the gapminder analysis of
+the first use case but with a more extensive dataset. The scatter plot
+and the regression analysis are displayed below.</p>
 <p><img src="figures/ExPanD_worldbank_01.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>It shows a positive association of GDP per capita with life expectancy after controlling for public spending on health and income inequality (which happens to be negatively associated with life expectancy). As you see from the table, the number of observations is 1,068. How does this reconcile with the roughly 8,500 observations that the World Bank sample has data for? A quick look at the missing values graph below helps to understand the issue.</p>
+<p>It shows a positive association of GDP per capita with life
+expectancy after controlling for public spending on health and income
+inequality (which happens to be negatively associated with life
+expectancy). As you see from the table, the number of observations is
+1,068. How does this reconcile with the roughly 8,500 observations that
+the World Bank sample has data for? A quick look at the missing values
+graph below helps to understand the issue.</p>
 <p><img src="figures/ExPanD_worldbank_02.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>While <code>gdp_capita</code> is available for all observations (remember the <code>can_be_na</code> variable in the data definition data frame?) and <code>life_expectancy</code> has good coverage for all but the most recent years, both <code>pubspend_health_gdp</code> and <code>giniindex</code> are only available for later years in the sample. <code>giniindex</code> is also only available for a subset of countries. Taken together, this drastically reduces the sample size of the regression model. Explore whether this has an effect on the documented associations by excluding and including the test variables one-by-one. You will see that the associations are reasonable robust.</p>
-<p>Now let’s see whether the distributional properties of the main independent variable of interest have an impact on the association. The screenshot below displays the histogram of <code>gdp_capita</code>.</p>
+<p>While <code>gdp_capita</code> is available for all observations
+(remember the <code>can_be_na</code> variable in the data definition
+data frame?) and <code>life_expectancy</code> has good coverage for all
+but the most recent years, both <code>pubspend_health_gdp</code> and
+<code>giniindex</code> are only available for later years in the sample.
+<code>giniindex</code> is also only available for a subset of countries.
+Taken together, this drastically reduces the sample size of the
+regression model. Explore whether this has an effect on the documented
+associations by excluding and including the test variables one-by-one.
+You will see that the associations are reasonable robust.</p>
+<p>Now let’s see whether the distributional properties of the main
+independent variable of interest have an impact on the association. The
+screenshot below displays the histogram of <code>gdp_capita</code>.</p>
 <p><img src="figures/ExPanD_worldbank_03.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>This looks like a log-normal distributed variable, so a log transformation should yield a more normally distributed variable. To calculate a logged variant of <code>gdp_capita</code> we first need to find which World Bank data item <code>gdp_capita</code> is based on. Hovering with your mouse over the variable name in the descriptive sample, you will see that it is based on the data item <code>NY.GDP.PCP.KD</code>. When you switch the tab of the descriptive statistics to the base sample, you can see all 72 base data items that the <code>worldbank</code> dataset contains. Use the dialog above the descriptive statistics as shown below to calculate a log-transformed measure of GDP per capita.</p>
+<p>This looks like a log-normal distributed variable, so a log
+transformation should yield a more normally distributed variable. To
+calculate a logged variant of <code>gdp_capita</code> we first need to
+find which World Bank data item <code>gdp_capita</code> is based on.
+Hovering with your mouse over the variable name in the descriptive
+sample, you will see that it is based on the data item
+<code>NY.GDP.PCP.KD</code>. When you switch the tab of the descriptive
+statistics to the base sample, you can see all 72 base data items that
+the <code>worldbank</code> dataset contains. Use the dialog above the
+descriptive statistics as shown below to calculate a log-transformed
+measure of GDP per capita.</p>
 <p><img src="figures/ExPanD_worldbank_04.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>You will see a message window that your variable was successfully generated. How does its histogram look like?</p>
+<p>You will see a message window that your variable was successfully
+generated. How does its histogram look like?</p>
 <p><img src="figures/ExPanD_worldbank_05.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>Better. Now let’s see how this new variable is associated with life expectancy. First a quick look at the scatter plot.</p>
+<p>Better. Now let’s see how this new variable is associated with life
+expectancy. First a quick look at the scatter plot.</p>
 <p><img src="figures/ExPanD_worldbank_06.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>Now this looks different than the gapminder plot in the section above as it exhibits a more linear association. Let’s see how our regression model looks like when use <code>log_gdp_capita</code> instead of <code>gdp_capita</code>.</p>
+<p>Now this looks different than the gapminder plot in the section above
+as it exhibits a more linear association. Let’s see how our regression
+model looks like when use <code>log_gdp_capita</code> instead of
+<code>gdp_capita</code>.</p>
 <p><img src="figures/ExPanD_worldbank_07.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>The logged version of GDP per capita remains robustly positively associated with life expectancy but now income inequality (as measured by <code>giniindex</code>) is only marginally associated with life expectancy.</p>
-<p>Another thing that one can notice from the scatter plot above is that each country appears to be on its own “trajectory” in terms of life expectancy development. As we also know that in most countries and periods GDP per capita increases over time: Can we be sure that the association of GDP per capita and life expectancy is different from a general time trend in the data? Below, you will find a scatter plot that uses <code>time</code> as the independent variable.</p>
+<p>The logged version of GDP per capita remains robustly positively
+associated with life expectancy but now income inequality (as measured
+by <code>giniindex</code>) is only marginally associated with life
+expectancy.</p>
+<p>Another thing that one can notice from the scatter plot above is that
+each country appears to be on its own “trajectory” in terms of life
+expectancy development. As we also know that in most countries and
+periods GDP per capita increases over time: Can we be sure that the
+association of GDP per capita and life expectancy is different from a
+general time trend in the data? Below, you will find a scatter plot that
+uses <code>time</code> as the independent variable.</p>
 <p><img src="figures/ExPanD_worldbank_08.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>You can see that for most countries, life expectancy seems to follow a robust and similar linear time trend. There are some exceptions from this rule (China, Mali, Rwanda, Sierra Leone). To infer whether our association “survives” a control for time-induced variance in life expectancy that is stable across countries, we estimate a regression model that includes country and year fixed effects. See below.</p>
+<p>You can see that for most countries, life expectancy seems to follow
+a robust and similar linear time trend. There are some exceptions from
+this rule (China, Mali, Rwanda, Sierra Leone). To infer whether our
+association “survives” a control for time-induced variance in life
+expectancy that is stable across countries, we estimate a regression
+model that includes country and year fixed effects. See below.</p>
 <p><img src="figures/ExPanD_worldbank_09.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>All associations are gone. Fun fact: When you replace <code>lag_gdp_capita</code> with <code>gdp_capita</code> you will see that it’s coefficient even turns significantly negative meaning that increasing GDP per capita is associated with a decrease in life expectancy!</p>
-<p>Please keep in mind that the above is not meant to challenge common believes in health economics and epidemiology but is merely being presented as a use case for interactive data exploration to infer the robustness of statistical inference.</p>
+<p>All associations are gone. Fun fact: When you replace
+<code>lag_gdp_capita</code> with <code>gdp_capita</code> you will see
+that it’s coefficient even turns significantly negative meaning that
+increasing GDP per capita is associated with a decrease in life
+expectancy!</p>
+<p>Please keep in mind that the above is not meant to challenge common
+believes in health economics and epidemiology but is merely being
+presented as a use case for interactive data exploration to infer the
+robustness of statistical inference.</p>
 </div>
-<div id="using-expand-with-multiple-samples" class="section level2">
-<h2 class="hasAnchor">
-<a href="#using-expand-with-multiple-samples" class="anchor"></a>Using ExPanD with multiple samples</h2>
-<p>There are instances where you might want to explore several samples simultaneously. Two examples:</p>
+<div class="section level2">
+<h2 id="using-expand-with-multiple-samples">Using ExPanD with multiple samples<a class="anchor" aria-label="anchor" href="#using-expand-with-multiple-samples"></a>
+</h2>
+<p>There are instances where you might want to explore several samples
+simultaneously. Two examples:</p>
 <ul>
-<li>You are analyzing observational data and data is available from alternative data sources. You are interested to learn whether data from different data sources will generate the same insights.</li>
-<li>You want to use exploratory data analysis to develop a predictive model. You need to test this predictive model out of sample. For this, you split your original sample in a training and a test dataset.</li>
+<li>You are analyzing observational data and data is available from
+alternative data sources. You are interested to learn whether data from
+different data sources will generate the same insights.</li>
+<li>You want to use exploratory data analysis to develop a predictive
+model. You need to test this predictive model out of sample. For this,
+you split your original sample in a training and a test dataset.</li>
 </ul>
-<p>Our third and final use case will build on the second motivation. For this, we will explore and test an association that is a key finding in an area where I do most of my research work: financial accounting and capital markets.</p>
-<p>I do not want to bore you with the details but in essence the topic that we will explore is the concurrent association between financial reporting measures of corporate performance and stock market returns. Prior research has documented that financial reporting performance measures, most prominently net income, have a robust but overall weak association with concurrent stock market returns. Net income can be broken up in two components: Cash flow from operations and total accruals. While the former essentially captures the net cash receipts that a company realizes over the year as an outcome of its operating business activities, the latter reflects the financial accounting adjustments to reflect timing disparities between economic activities and cash collection. Two examples for total accruals:</p>
+<p>Our third and final use case will build on the second motivation. For
+this, we will explore and test an association that is a key finding in
+an area where I do most of my research work: financial accounting and
+capital markets.</p>
+<p>I do not want to bore you with the details but in essence the topic
+that we will explore is the concurrent association between financial
+reporting measures of corporate performance and stock market returns.
+Prior research has documented that financial reporting performance
+measures, most prominently net income, have a robust but overall weak
+association with concurrent stock market returns. Net income can be
+broken up in two components: Cash flow from operations and total
+accruals. While the former essentially captures the net cash receipts
+that a company realizes over the year as an outcome of its operating
+business activities, the latter reflects the financial accounting
+adjustments to reflect timing disparities between economic activities
+and cash collection. Two examples for total accruals:</p>
 <ul>
-<li>A company sells goods to a customer in period 1 but does not collect the cash revenue until period 2. This results in a positive accrual in period 1 and a negative accrual in period 2.</li>
-<li>A company buys and pays inventory in period 1, uses it in production in period 2, and sells the goods for cash in period 3. Here, we would have a positive accrual (adjusting the negative cash flow from operations) in period 1 and a negative accrual in period 3.</li>
+<li>A company sells goods to a customer in period 1 but does not collect
+the cash revenue until period 2. This results in a positive accrual in
+period 1 and a negative accrual in period 2.</li>
+<li>A company buys and pays inventory in period 1, uses it in production
+in period 2, and sells the goods for cash in period 3. Here, we would
+have a positive accrual (adjusting the negative cash flow from
+operations) in period 1 and a negative accrual in period 3.</li>
 </ul>
-<p>Generously glossing other many important details, the accounting literature has documented three key findings around this notion:</p>
+<p>Generously glossing other many important details, the accounting
+literature has documented three key findings around this notion:</p>
 <ul>
-<li>Both, cash flows from operations and total accruals, are associated with concurrent stock returns</li>
-<li>Cash flows from operations have a stronger association with returns than total accruals</li>
-<li>The stock market seems to miss-price accruals meaning that it puts too much weight on accruals when incorporating net income news in stock prices.</li>
+<li>Both, cash flows from operations and total accruals, are associated
+with concurrent stock returns</li>
+<li>Cash flows from operations have a stronger association with returns
+than total accruals</li>
+<li>The stock market seems to miss-price accruals meaning that it puts
+too much weight on accruals when incorporating net income news in stock
+prices.</li>
 </ul>
-<p>We will revisit the second statement. To do so, we use the dataset <code>russell_3000</code> that is included with the ExPanDaR package. Most capital market based research uses data from commercial data vendors, requiring researchers to obtain a costly license. To circumvent this barrier to open science, we collect data from publicly available APIs (Yahoo and Google Finance) using the <code>tidyquant</code> package. The sample comprises available data for a sample of U.S. listed firms that where members of the Russell 3000 index in 2017. The data are more or less as provided by <code>tidyquant</code> and are used here for illustrative purposes only.</p>
-<p>To explore the data and to test a model on the data, we split the <code>russell_3000</code> in two equally sized randomly selected samples: The “training sample” and the “test sample”. The idea is that we will explore the training sample but will infer the significance of our association test from the test sample. Run the following to generate the two samples and to start ExPanD with them.</p>
+<p>We will revisit the second statement. To do so, we use the dataset
+<code>russell_3000</code> that is included with the ExPanDaR package.
+Most capital market based research uses data from commercial data
+vendors, requiring researchers to obtain a costly license. To circumvent
+this barrier to open science, we collect data from publicly available
+APIs (Yahoo and Google Finance) using the <code>tidyquant</code>
+package. The sample comprises available data for a sample of U.S. listed
+firms that where members of the Russell 3000 index in 2017. The data are
+more or less as provided by <code>tidyquant</code> and are used here for
+illustrative purposes only.</p>
+<p>To explore the data and to test a model on the data, we split the
+<code>russell_3000</code> in two equally sized randomly selected
+samples: The “training sample” and the “test sample”. The idea is that
+we will explore the training sample but will infer the significance of
+our association test from the test sample. Run the following to generate
+the two samples and to start ExPanD with them.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://joachim-gassen.github.io/ExPanDaR/">ExPanDaR</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span>
-<span class="va">training_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">.5</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
-<span class="va">test_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sets.html">setdiff</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">)</span>, <span class="va">training_sample</span><span class="op">)</span>
-
-<span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">[</span><span class="va">training_sample</span>, <span class="op">]</span>, <span class="va">russell_3000</span><span class="op">[</span><span class="va">test_sample</span>, <span class="op">]</span><span class="op">)</span>,
-       df_def <span class="op">=</span> <span class="va">russell_3000_data_def</span>,
-       df_name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Training sample"</span>, <span class="st">"Test sample"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>ExPanD starts displaying the training sample. As you can infer from the bar chart and the descriptive table, the <code>russell_3000</code> dataset contains a short unbalanced panel of four years and 2,289 firms. Also, you have varying amounts of missing data across the variables of the dataset with some variables containing no values for the first fiscal year of the sample. When you hover with your mouse over the variable names in the descriptive table a tool-tip will present you with hopefully informative variable definitions.</p>
-<p>Where do the variable definitions come from? When you take a look at the <code><a href="../reference/ExPanD.html">ExPanD()</a></code> function call, you will notice the <code>df_def</code> parameter. It points to a data frame provided by the ExPanDaR package that provides the variable definitions.</p>
-<p>The variables that we are interested in are <code>return</code> (the annual stock market return and our dependent variable), <code>nioa</code> (net income, deflated by average total assets), <code>cfoa</code> (cash flow from operations, deflated by average total assets) and <code>accoa</code> (total accruals, deflated by average total assets). To explore their level of association, I suggest that you start with analyzing the scatter plot of cash flow and returns. You will notice that, again, extreme observations are relatively influential. Limit their influence by winsorizing to the 1 % and 99 % percentile. After doing that, you will get an image that looks like the screenshot below.</p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://trr266.github.io/ExPanDaR/" class="external-link">ExPanDaR</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
+<span><span class="va">training_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fl">.5</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">test_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sets.html" class="external-link">setdiff</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">)</span>, <span class="va">training_sample</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">[</span><span class="va">training_sample</span>, <span class="op">]</span>, <span class="va">russell_3000</span><span class="op">[</span><span class="va">test_sample</span>, <span class="op">]</span><span class="op">)</span>,</span>
+<span>       df_def <span class="op">=</span> <span class="va">russell_3000_data_def</span>,</span>
+<span>       df_name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Training sample"</span>, <span class="st">"Test sample"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>ExPanD starts displaying the training sample. As you can infer from
+the bar chart and the descriptive table, the <code>russell_3000</code>
+dataset contains a short unbalanced panel of four years and 2,289 firms.
+Also, you have varying amounts of missing data across the variables of
+the dataset with some variables containing no values for the first
+fiscal year of the sample. When you hover with your mouse over the
+variable names in the descriptive table a tool-tip will present you with
+hopefully informative variable definitions.</p>
+<p>Where do the variable definitions come from? When you take a look at
+the <code><a href="../reference/ExPanD.html">ExPanD()</a></code> function call, you will notice the
+<code>df_def</code> parameter. It points to a data frame provided by the
+ExPanDaR package that provides the variable definitions.</p>
+<p>The variables that we are interested in are <code>return</code> (the
+annual stock market return and our dependent variable),
+<code>nioa</code> (net income, deflated by average total assets),
+<code>cfoa</code> (cash flow from operations, deflated by average total
+assets) and <code>accoa</code> (total accruals, deflated by average
+total assets). To explore their level of association, I suggest that you
+start with analyzing the scatter plot of cash flow and returns. You will
+notice that, again, extreme observations are relatively influential.
+Limit their influence by winsorizing to the 1 % and 99 % percentile.
+After doing that, you will get an image that looks like the screenshot
+below.</p>
 <p><img src="figures/ExPanD_two_samples_01.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>There seems to be the predicted positive association, although it is relatively weak and mostly confined to positive cash flows. Let’s see how the association looks like for accruals in the picture below.</p>
+<p>There seems to be the predicted positive association, although it is
+relatively weak and mostly confined to positive cash flows. Let’s see
+how the association looks like for accruals in the picture below.</p>
 <p><img src="figures/ExPanD_two_samples_02.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>No robust association visible here. To test whether the two associations indeed differ, we set up a regression model using the fact that <span class="math inline">\(nioa = cfoa + accoa\)</span>. This is why we can test for significant differences in the association by regressing returns on net income and accruals. If the coefficient for accruals turns out to be significantly negative, we found evidence that the association of accruals with returns is significantly weaker that the association of cash flow with returns. In order to control for unobserved time-constant factors that drive stock market returns and that vary at the firm level, we include firm fixed effects in the analysis. The figure below shows our findings for the training sample.</p>
+<p>No robust association visible here. To test whether the two
+associations indeed differ, we set up a regression model using the fact
+that <span class="math inline">\(nioa = cfoa + accoa\)</span>. This is
+why we can test for significant differences in the association by
+regressing returns on net income and accruals. If the coefficient for
+accruals turns out to be significantly negative, we found evidence that
+the association of accruals with returns is significantly weaker that
+the association of cash flow with returns. In order to control for
+unobserved time-constant factors that drive stock market returns and
+that vary at the firm level, we include firm fixed effects in the
+analysis. The figure below shows our findings for the training
+sample.</p>
 <p><img src="figures/ExPanD_two_samples_03.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>We find a marginally significant coefficient for <span class="math inline">\(accoa\)</span> but, as we discussed above, we should not base our inferences on the training sample since we used this sample to explore the data. For example, our (admittedly ad hoc) decision to winsorize the data was based on a visual inspection of the scatter plot. In a strict sense, this violates the usage of this data for testing. So, scroll up, switch the sample to the test sample and see what you find.</p>
+<p>We find a marginally significant coefficient for <span class="math inline">\(accoa\)</span> but, as we discussed above, we
+should not base our inferences on the training sample since we used this
+sample to explore the data. For example, our (admittedly ad hoc)
+decision to winsorize the data was based on a visual inspection of the
+scatter plot. In a strict sense, this violates the usage of this data
+for testing. So, scroll up, switch the sample to the test sample and see
+what you find.</p>
 <p><img src="figures/ExPanD_two_samples_04.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>As the screenshot shows, we find no significant coefficient for <span class="math inline">\(accoa\)</span>. This indicates that the predicted difference in associations is not statistically significant at conventional levels. While this might be driven by the relatively low power of the test (short panel with cross-sectional fixed effects), I encourage you to use ExPanD to explore this finding further. You will easily notice that depending on how exactly you specify your test (fixed effect structures, standard error clustering, etc.) and whether/how you cut your training and test sample, you are able to generate findings that are or are not “statistically significant at conventional levels”. So, again, this use case of ExPanD demonstrates how the app can be used to assess the robustness of statistical inference.</p>
+<p>As the screenshot shows, we find no significant coefficient for <span class="math inline">\(accoa\)</span>. This indicates that the predicted
+difference in associations is not statistically significant at
+conventional levels. While this might be driven by the relatively low
+power of the test (short panel with cross-sectional fixed effects), I
+encourage you to use ExPanD to explore this finding further. You will
+easily notice that depending on how exactly you specify your test (fixed
+effect structures, standard error clustering, etc.) and whether/how you
+cut your training and test sample, you are able to generate findings
+that are or are not “statistically significant at conventional levels”.
+So, again, this use case of ExPanD demonstrates how the app can be used
+to assess the robustness of statistical inference.</p>
 </div>
-<div id="making-expand-available-to-users-without-providing-them-raw-data-access" class="section level2">
-<h2 class="hasAnchor">
-<a href="#making-expand-available-to-users-without-providing-them-raw-data-access" class="anchor"></a>Making ExPanD available to users without providing them raw data access</h2>
-<p>In many instances, you as a researcher want to provide readers, editors and/or reviewers the opportunity to assess the robustness of your findings but are unable to provide them with the underlying data as this data is subject to commercial licensing or other usage restrictions. By uploading your ExPanD instance on a public server, you can make your results accessible without sharing the data. As shiny apps can be hosted on dedicated servers, this is easily achieved. Maybe you noticed the “Publish” icon in the top-right corner of your ExPanD window. Click on it to learn more about your options.</p>
-<p>As an example, you can access an ExPanD-based extension of a current working paper of our team <a href="https://jgassen.shinyapps.io/expacc/">here</a>.</p>
+<div class="section level2">
+<h2 id="making-expand-available-to-users-without-providing-them-raw-data-access">Making ExPanD available to users without providing them raw data
+access<a class="anchor" aria-label="anchor" href="#making-expand-available-to-users-without-providing-them-raw-data-access"></a>
+</h2>
+<p>In many instances, you as a researcher want to provide readers,
+editors and/or reviewers the opportunity to assess the robustness of
+your findings but are unable to provide them with the underlying data as
+this data is subject to commercial licensing or other usage
+restrictions. By uploading your ExPanD instance on a public server, you
+can make your results accessible without sharing the data. As shiny apps
+can be hosted on dedicated servers, this is easily achieved. Maybe you
+noticed the “Publish” icon in the top-right corner of your ExPanD
+window. Click on it to learn more about your options.</p>
+<p>As an example, you can access an ExPanD-based extension of a current
+working paper of our team <a href="https://jgassen.shinyapps.io/expacc/" class="external-link">here</a>.</p>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
-</div>
-
-
-
-      <footer><div class="copyright">
-  <p>Developed by Joachim Gassen.</p>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+
+
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by Joachim Gassen.</p>
 </div>
 
-      </footer>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+</div>
+
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>

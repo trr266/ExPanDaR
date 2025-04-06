@@ -13,7 +13,7 @@ library(knitr)
 # ExPanDaR: Explore Your Data Interactively 
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Travis-CI Build Status](https://travis-ci.org/joachim-gassen/ExPanDaR.svg?branch=master)](https://travis-ci.org/joachim-gassen/ExPanDaR)
+[![Travis-CI Build Status](https://travis-ci.org/trr266/ExPanDaR.svg?branch=master)](https://travis-ci.org/trr266/ExPanDaR)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ExPanDaR)](https://cran.r-project.org/package=ExPanDaR)
 [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ExPanDaR)](https://cran.r-project.org/package=ExPanDaR)
 
@@ -39,7 +39,7 @@ knitr::include_graphics("vignettes/figures/ExPanD_simple_03.jpg")
 If you are interested to see what ExPanD has to offer without diving into R, click [here](https://jgassen.shinyapps.io/expand_wb/) to explore an instance of ExPanD that hosts World Bank data or click
 [here](https://jgassen.shinyapps.io/expand_r3/) for a financial accounting and stock returns dataset of U.S. firms.
 
-To see how ExPanD can be customized, take a look at [this blog post](https://joachim-gassen.github.io/2019/04/customize-your-interactive-eda-explore-the-fuel-economy-of-the-u.s.-car-market/) that generates [this display of the development of fuel economy in the U.S. car market](https://jgassen.shinyapps.io/expand_fuel_economy).
+To see how ExPanD can be customized, take a look at [this blog post](https://trr266.github.io/2019/04/customize-your-interactive-eda-explore-the-fuel-economy-of-the-u.s.-car-market/) that generates [this display of the development of fuel economy in the U.S. car market](https://jgassen.shinyapps.io/expand_fuel_economy).
 
 If you want to analyze your own data instead, you can also access a variant of ExPanD app [here](https://jgassen.shinyapps.io/expand/) that allows user-side data uploads. No worries: Your data won't be stored on the server and will get erased from memory as soon as you close the web connection. 
 
@@ -60,7 +60,7 @@ Or, if you want to install the current development version from Github:
 if (!require("devtools")) {
   install.packages("devtools")
 }
-devtools::install_github("joachim-gassen/ExPanDaR")
+devtools::install_github("trr266/ExPanDaR")
 library(ExPanDaR)
 ````
 

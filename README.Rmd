@@ -11,7 +11,7 @@ library(knitr)
 # ExPanDaR: Explore Your Data Interactively <img src="logo.png" align="right" />
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Travis-CI Build Status](https://travis-ci.org/joachim-gassen/ExPanDaR.svg?branch=master)](https://travis-ci.org/joachim-gassen/ExPanDaR)
+[![Travis-CI Build Status](https://travis-ci.org/trr266/ExPanDaR.svg?branch=master)](https://travis-ci.org/trr266/ExPanDaR)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ExPanDaR)](https://cran.r-project.org/package=ExPanDaR)
 [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ExPanDaR)](https://cran.r-project.org/package=ExPanDaR)
 
@@ -57,7 +57,7 @@ Or, if you want to install the current development version from Github:
 if (!require("devtools")) {
   install.packages("devtools")
 }
-devtools::install_github("joachim-gassen/ExPanDaR")
+devtools::install_github("trr266/ExPanDaR")
 library(ExPanDaR)
 ````
 
@@ -103,13 +103,13 @@ Some additional information on how to use ExPanD can be found in the code file `
 
 ## Use ExPanDaR functions in your own EDA workflow
 
-Besides providing the ExPanD app, ExPanDaR comes with a set of functions that might be helpful in your own exploratory data analysis workflow, e.g., functions to quickly produce standard tables and plots. See [this vignette](https://joachim-gassen.github.io/ExPanDaR/articles/ExPanDaR-functions.html) for a quick walk-trough.
+Besides providing the ExPanD app, ExPanDaR comes with a set of functions that might be helpful in your own exploratory data analysis workflow, e.g., functions to quickly produce standard tables and plots. See [this vignette](https://trr266.github.io/ExPanDaR/articles/ExPanDaR-functions.html) for a quick walk-trough.
 
 
 ## Further Information
 
 For further information, please refer to the articles and function call references of the package documentation, available 
-[here](https://joachim-gassen.github.io/ExPanDaR) for the CRAN version and 
-[here](https://joachim-gassen.github.io/ExPanDaR/dev) for the current development version.
+[here](https://trr266.github.io/ExPanDaR) for the CRAN version and 
+[here](https://trr266.github.io/ExPanDaR/dev) for the current development version.
 
 Enjoy!

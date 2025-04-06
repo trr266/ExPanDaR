@@ -18,7 +18,7 @@ The data definitions can be passed to \code{\link{ExPanD}} via the
 \details{
 Data definitions are as provided by the World Bank API and
 the code to generate them is available in the
- \href{https://github.com/joachim-gassen/ExPanDaR}{github repository}
+ \href{https://github.com/trr266/ExPanDaR}{github repository}
  of this package.
 }
 \examples{

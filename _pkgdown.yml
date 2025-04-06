@@ -1,6 +1,7 @@
 template:
   params:
     ganalytics: UA-119053376-1
+  bootstrap: 5
 development:
   mode: auto
 navbar:
@@ -28,7 +29,7 @@ navbar:
   right:
   - text: Code repository
     icon: fa-github
-    href: https://www.github.com/joachim-gassen/ExPanDaR
+    href: https://www.github.com/trr266/ExPanDaR
 
 articles:
 - title: ExPanD
@@ -77,3 +78,6 @@ reference:
   - worldbank_data_def
   - worldbank_var_def
   - ExPanD_config_worldbank
+- title: internal
+  contents:
+  - ExPanDaR

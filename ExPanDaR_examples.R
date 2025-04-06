@@ -98,7 +98,7 @@ title <- "Explore the Preston Curve with ExPanDaR"
 abstract <- paste(
   "The data for this sample has been collected using the",
   "<a href=https://data.worldbank.org>World Bank API</a>.",
-  "See this <a href=https://joachim-gassen.github.io/2018/12/interactive-panel-eda-with-3-lines-of-code>",
+  "See this <a href=https://trr266.github.io/2018/12/interactive-panel-eda-with-3-lines-of-code>",
   "blog post</a> for further information."
 )
 

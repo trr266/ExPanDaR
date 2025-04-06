@@ -4,7 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Provides a shiny-based front end (the ExPanD app) and
+    a set of functions for exploratory data analysis. Run as a web-based 
+    app, ExPanD enables users to assess the robustness of empirical evidence 
+    without providing them access to the underlying data. You can export a 
+    notebook containing the analysis of ExPanD and/or use the functions of the 
+    package to support your exploratory data analysis workflow. Refer to the 
+    vignettes of the package for more information on how to use ExPanD and/or 
+    the functions of this package.">
 <title>Explore Your Data Interactively • ExPanDaR</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -12,12 +20,11 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
-<script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Explore Your Data Interactively">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Explore Your Data Interactively">
 <meta property="og:description" content="Provides a shiny-based front end (the ExPanD app) and
     a set of functions for exploratory data analysis. Run as a web-based 
     app, ExPanD enables users to assess the robustness of empirical evidence 
@@ -39,90 +46,76 @@
   gtag('config', 'UA-119053376-1');
 </script>
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-home">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">ExPanDaR</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.5.3.9000</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
+    <nav class="navbar fixed-top navbar-default navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="index.html">ExPanDaR</a>
+
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.5.3.9000</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="active nav-item">
+  <a class="nav-link" href="index.html">
+    <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="reference/index.html">Reference</a>
+<li class="nav-item">
+  <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="news/index.html">News</a>
+<li class="nav-item">
+  <a class="nav-link" href="news/index.html">News</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li class="dropdown-header">ExPanD</li>
-    <li>
-      <a href="articles/use_ExPanD.html">Using ExPanD for Panel Data Exploration</a>
-    </li>
-    <li>
-      <a href="articles/customize_ExPanD.html">Customize ExPanD</a>
-    </li>
-    <li>
-      <a href="articles/ExPanD_notebook.html">Using the ExPanD Notebook function</a>
-    </li>
-    <li class="divider">
-    <li class="dropdown-header">'ExPanDaR' functions</li>
-    <li>
-      <a href="articles/ExPanDaR-functions.html">Using the functions of the 'ExPanDaR' package</a>
-    </li>
-  </ul>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <h6 class="dropdown-header" data-toc-skip>ExPanD</h6>
+    <a class="dropdown-item" href="articles/use_ExPanD.html">Using ExPanD for Panel Data Exploration</a>
+    <a class="dropdown-item" href="articles/customize_ExPanD.html">Customize ExPanD</a>
+    <a class="dropdown-item" href="articles/ExPanD_notebook.html">Using the ExPanD Notebook function</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>'ExPanDaR' functions</h6>
+    <a class="dropdown-item" href="articles/ExPanDaR-functions.html">Using the functions of the 'ExPanDaR' package</a>
+  </div>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://www.github.com/joachim-gassen/ExPanDaR">
-    <span class="fas fa-github"></span>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://www.github.com/trr266/ExPanDaR">
+    <span class="fa fa-github"></span>
      
     Code repository
   </a>
 </li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
+</nav><div class="container template-home">
+<div class="row">
+  <main id="main" class="col-md-9"><div class="section level1">
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="expandar-explore-your-data-interactively-">ExPanDaR: Explore Your Data Interactively <a class="anchor" aria-label="anchor" href="#expandar-explore-your-data-interactively-"></a>
+</h1>
 </div>
-<!--/.navbar -->
-
-      
-
-      </header><div class="row">
-  <div class="contents col-md-9">
-<div id="expandar-explore-your-data-interactively-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#expandar-explore-your-data-interactively-" class="anchor"></a>ExPanDaR: Explore Your Data Interactively <img src="logo.png" align="right">
-</h1></div>
-
-<div id="overview" class="section level2">
-<h2 class="hasAnchor">
-<a href="#overview" class="anchor"></a>Overview</h2>
+<p><a href="http://www.repostatus.org/#active" class="external-link"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed."></a> <a href="https://travis-ci.org/joachim-gassen/ExPanDaR" class="external-link"><img src="https://travis-ci.org/joachim-gassen/ExPanDaR.svg?branch=master" alt="Travis-CI Build Status"></a> <a href="https://cran.r-project.org/package=ExPanDaR" class="external-link"><img src="http://www.r-pkg.org/badges/version/ExPanDaR" alt="CRAN_Status_Badge"></a> <a href="https://cran.r-project.org/package=ExPanDaR" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/grand-total/ExPanDaR" alt="CRAN_Download_Badge"></a></p>
+<div class="section level2">
+<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+</h2>
 <p>You are visiting the github repository of the ExPanDaR (Explore Panel Data with R) package. ExPanDaR provides the code base for the ExPanD web app. ExPanD is a shiny based app supporting interactive exploratory data analysis.</p>
 <p>ExPanD has two purposes:</p>
 <ul>
@@ -132,118 +125,118 @@
 <p>While I hope that ExPanD will be particularly helpful in the academic review, publication and replication process I also think that it is convenient for typical exploratory data analysis workflows. In addition, it has already proven to be helpful in the classroom.</p>
 <p>This is what ExPanD looks like:</p>
 <p><img src="articles/figures/ExPanD_simple_03.jpg" width="90%" style="display: block; margin: auto;"></p>
-<p>If you are interested to see what ExPanD has to offer without diving into R, click <a href="https://jgassen.shinyapps.io/expand_wb/">here</a> to explore an instance of ExPanD that hosts World Bank data or click <a href="https://jgassen.shinyapps.io/expand_r3/">here</a> for a financial accounting and stock returns dataset of U.S. firms.</p>
-<p>To see how ExPanD can be customized, take a look at <a href="https://joachim-gassen.github.io/2019/04/customize-your-interactive-eda-explore-the-fuel-economy-of-the-u.s.-car-market/">this blog post</a> that generates <a href="https://jgassen.shinyapps.io/expand_fuel_economy">this display of the development of fuel economy in the U.S. car market</a>.</p>
-<p>If you want to analyze your own data instead, you can also access a variant of ExPanD app <a href="https://jgassen.shinyapps.io/expand/">here</a> that allows user-side data uploads. No worries: Your data won’t be stored on the server and will get erased from memory as soon as you close the web connection.</p>
+<p>If you are interested to see what ExPanD has to offer without diving into R, click <a href="https://jgassen.shinyapps.io/expand_wb/" class="external-link">here</a> to explore an instance of ExPanD that hosts World Bank data or click <a href="https://jgassen.shinyapps.io/expand_r3/" class="external-link">here</a> for a financial accounting and stock returns dataset of U.S. firms.</p>
+<p>To see how ExPanD can be customized, take a look at <a href="https://joachim-gassen.github.io/2019/04/customize-your-interactive-eda-explore-the-fuel-economy-of-the-u.s.-car-market/" class="external-link">this blog post</a> that generates <a href="https://jgassen.shinyapps.io/expand_fuel_economy" class="external-link">this display of the development of fuel economy in the U.S. car market</a>.</p>
+<p>If you want to analyze your own data instead, you can also access a variant of ExPanD app <a href="https://jgassen.shinyapps.io/expand/" class="external-link">here</a> that allows user-side data uploads. No worries: Your data won’t be stored on the server and will get erased from memory as soon as you close the web connection.</p>
 </div>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>If you are in for the full treat and want to test ExPanD from within R, run the following in your R session to install the ExPanDaR package from CRAN.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"ExPanDaR"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://joachim-gassen.github.io/ExPanDaR/">ExPanDaR</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ExPanDaR"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://trr266.github.io/ExPanDaR/" class="external-link">ExPanDaR</a></span><span class="op">)</span></span></code></pre></div>
 <p>Or, if you want to install the current development version from Github:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/">"devtools"</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
-  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
-<span class="op">}</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"joachim-gassen/ExPanDaR"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://joachim-gassen.github.io/ExPanDaR/">ExPanDaR</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/" class="external-link">"devtools"</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"joachim-gassen/ExPanDaR"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://trr266.github.io/ExPanDaR/" class="external-link">ExPanDaR</a></span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="basic-usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#basic-usage" class="anchor"></a>Basic Usage</h2>
+<div class="section level2">
+<h2 id="basic-usage">Basic Usage<a class="anchor" aria-label="anchor" href="#basic-usage"></a>
+</h2>
 <p>You can either start ExPanD without arguments so that it starts with a file upload dialog…</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/ExPanD.html">ExPanD</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/ExPanD.html">ExPanD</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>…or use it to explore a cross-sectional data frame with at least two numeric variables…</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/ExPanD.html">ExPanD</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/ExPanD.html">ExPanD</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span></span></code></pre></div>
 <p>…or start with one of the two example datasets that come with the package to understand hot to use it on long-format panel data.</p>
 <p>Please note: The last parameter (<code>export_nb_option</code>) allows the user to download a notebook and the data to continue the analysis in R. Maybe not the best idea if you are hosting your app publicly and want to keep its data private.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">worldbank</span>,  
-       df_def <span class="op">=</span> <span class="va">worldbank_data_def</span>, 
-       var_def <span class="op">=</span> <span class="va">worldbank_var_def</span>,
-       df_name <span class="op">=</span> <span class="st">"World Bank Data"</span>,
-       config_list <span class="op">=</span> <span class="va">ExPanD_config_worldbank</span>,
-       export_nb_option <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="fu"><a href="reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">russell_3000</span>,  
-       df_def <span class="op">=</span> <span class="va">russell_3000_data_def</span>, 
-       df_name <span class="op">=</span> <span class="st">"Russell 3000"</span>,
-       config_list <span class="op">=</span> <span class="va">ExPanD_config_russell_3000</span>,
-       export_nb_option <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">worldbank</span>,  </span>
+<span>       df_def <span class="op">=</span> <span class="va">worldbank_data_def</span>, </span>
+<span>       var_def <span class="op">=</span> <span class="va">worldbank_var_def</span>,</span>
+<span>       df_name <span class="op">=</span> <span class="st">"World Bank Data"</span>,</span>
+<span>       config_list <span class="op">=</span> <span class="va">ExPanD_config_worldbank</span>,</span>
+<span>       export_nb_option <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/ExPanD.html">ExPanD</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">russell_3000</span>,  </span>
+<span>       df_def <span class="op">=</span> <span class="va">russell_3000_data_def</span>, </span>
+<span>       df_name <span class="op">=</span> <span class="st">"Russell 3000"</span>,</span>
+<span>       config_list <span class="op">=</span> <span class="va">ExPanD_config_russell_3000</span>,</span>
+<span>       export_nb_option <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>Some additional information on how to use ExPanD can be found in the code file <code>ExPanDaR_examples.R</code> in the root directory.</p>
 </div>
-<div id="use-expandar-functions-in-your-own-eda-workflow" class="section level2">
-<h2 class="hasAnchor">
-<a href="#use-expandar-functions-in-your-own-eda-workflow" class="anchor"></a>Use ExPanDaR functions in your own EDA workflow</h2>
-<p>Besides providing the ExPanD app, ExPanDaR comes with a set of functions that might be helpful in your own exploratory data analysis workflow, e.g., functions to quickly produce standard tables and plots. See <a href="https://joachim-gassen.github.io/ExPanDaR/articles/ExPanDaR-functions.html">this vignette</a> for a quick walk-trough.</p>
+<div class="section level2">
+<h2 id="use-expandar-functions-in-your-own-eda-workflow">Use ExPanDaR functions in your own EDA workflow<a class="anchor" aria-label="anchor" href="#use-expandar-functions-in-your-own-eda-workflow"></a>
+</h2>
+<p>Besides providing the ExPanD app, ExPanDaR comes with a set of functions that might be helpful in your own exploratory data analysis workflow, e.g., functions to quickly produce standard tables and plots. See <a href="https://joachim-gassen.github.io/ExPanDaR/articles/ExPanDaR-functions.html" class="external-link">this vignette</a> for a quick walk-trough.</p>
 </div>
-<div id="further-information" class="section level2">
-<h2 class="hasAnchor">
-<a href="#further-information" class="anchor"></a>Further Information</h2>
-<p>For further information, please refer to the articles and function call references of the package documentation, available <a href="https://joachim-gassen.github.io/ExPanDaR">here</a> for the CRAN version and <a href="https://joachim-gassen.github.io/ExPanDaR/dev">here</a> for the current development version.</p>
+<div class="section level2">
+<h2 id="further-information">Further Information<a class="anchor" aria-label="anchor" href="#further-information"></a>
+</h2>
+<p>For further information, please refer to the articles and function call references of the package documentation, available <a href="https://joachim-gassen.github.io/ExPanDaR" class="external-link">here</a> for the CRAN version and <a href="https://joachim-gassen.github.io/ExPanDaR/dev" class="external-link">here</a> for the current development version.</p>
 <p>Enjoy!</p>
 </div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="links">
-<h2>Links</h2>
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=ExPanDaR">https://​cloud.r-project.org/​package=ExPanDaR</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/joachim-gassen/ExPanDaR/">https://​github.com/​joachim-gassen/​ExPanDaR/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/joachim-gassen/ExPanDaR/issues">https://​github.com/​joachim-gassen/​ExPanDaR/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=ExPanDaR" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/trr266/ExPanDaR/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/trr266/ExPanDaR/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
+<a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
 </li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing ExPanDaR</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Joachim Gassen <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-4364-2911" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Joachim Gassen <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-4364-2911" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed."></a></li>
-<li><a href="https://travis-ci.org/joachim-gassen/ExPanDaR"><img src="https://travis-ci.org/joachim-gassen/ExPanDaR.svg?branch=master" alt="Travis-CI Build Status"></a></li>
-<li><a href="https://cran.r-project.org/package=ExPanDaR"><img src="http://www.r-pkg.org/badges/version/ExPanDaR" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://cran.r-project.org/package=ExPanDaR"><img src="http://cranlogs.r-pkg.org/badges/grand-total/ExPanDaR" alt="CRAN_Download_Badge"></a></li>
-</ul>
-</div>
-</div>
+
+
+  </aside>
 </div>
 
 
-      <footer><div class="copyright">
-  <p>Developed by Joachim Gassen.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by Joachim Gassen.</p>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>

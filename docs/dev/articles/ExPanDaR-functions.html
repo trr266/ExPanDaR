@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="ExPanDaR">
 <title>Using the functions of the ExPanDaR package • ExPanDaR</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,12 +13,11 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Using the functions of the ExPanDaR package">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Using the functions of the ExPanDaR package">
 <meta property="og:description" content="ExPanDaR">
 <meta property="og:image" content="/logo.png">
 <meta name="robots" content="noindex">
@@ -32,107 +32,122 @@
   gtag('config', 'UA-119053376-1');
 </script>
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">ExPanDaR</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.5.3.9000</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
+    <nav class="navbar fixed-top navbar-default navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">ExPanDaR</a>
+
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.5.3.9000</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../index.html">
+    <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="../reference/index.html">Reference</a>
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../news/index.html">News</a>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">News</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li class="dropdown-header">ExPanD</li>
-    <li>
-      <a href="../articles/use_ExPanD.html">Using ExPanD for Panel Data Exploration</a>
-    </li>
-    <li>
-      <a href="../articles/customize_ExPanD.html">Customize ExPanD</a>
-    </li>
-    <li>
-      <a href="../articles/ExPanD_notebook.html">Using the ExPanD Notebook function</a>
-    </li>
-    <li class="divider">
-    <li class="dropdown-header">'ExPanDaR' functions</li>
-    <li>
-      <a href="../articles/ExPanDaR-functions.html">Using the functions of the 'ExPanDaR' package</a>
-    </li>
-  </ul>
+<li class="active nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <h6 class="dropdown-header" data-toc-skip>ExPanD</h6>
+    <a class="dropdown-item" href="../articles/use_ExPanD.html">Using ExPanD for Panel Data Exploration</a>
+    <a class="dropdown-item" href="../articles/customize_ExPanD.html">Customize ExPanD</a>
+    <a class="dropdown-item" href="../articles/ExPanD_notebook.html">Using the ExPanD Notebook function</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>'ExPanDaR' functions</h6>
+    <a class="dropdown-item" href="../articles/ExPanDaR-functions.html">Using the functions of the 'ExPanDaR' package</a>
+  </div>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://www.github.com/joachim-gassen/ExPanDaR">
-    <span class="fas fa-github"></span>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://www.github.com/trr266/ExPanDaR">
+    <span class="fa fa-github"></span>
      
     Code repository
   </a>
 </li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
-      
 
-      </header><script src="ExPanDaR-functions_files/header-attrs-2.6/header-attrs.js"></script><script src="ExPanDaR-functions_files/kePrint-0.0.1/kePrint.js"></script><link href="ExPanDaR-functions_files/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+<script src="ExPanDaR-functions_files/kePrint-0.0.1/kePrint.js"></script><link href="ExPanDaR-functions_files/lightable-0.0.1/lightable.css" rel="stylesheet">
 <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Using the functions of the ExPanDaR package</h1>
-                        <h4 class="author">Joachim Gassen</h4>
+  <main id="main" class="col-md-9"><div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>Using the functions of the ExPanDaR package</h1>
+                        <h4 data-toc-skip class="author">Joachim
+Gassen</h4>
             
-            <h4 class="date">2021-04-11</h4>
+            <h4 data-toc-skip class="date">2025-04-06</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/joachim-gassen/ExPanDaR/blob/master/vignettes/ExPanDaR-functions.Rmd"><code>vignettes/ExPanDaR-functions.Rmd</code></a></small>
-      <div class="hidden name"><code>ExPanDaR-functions.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="https://github.com/trr266/ExPanDaR/blob/HEAD/vignettes/ExPanDaR-functions.Rmd" class="external-link"><code>vignettes/ExPanDaR-functions.Rmd</code></a></small>
+      <div class="d-none name"><code>ExPanDaR-functions.Rmd</code></div>
     </div>
 
     
     
-<p>While the main purpose of the ExPanDaR package is to provide the infrastructure for the ExPanD app, the auxiliary functions of the package can also be used to support your exploratory data analysis workflow in your own code. All functions are relatively thin wrappers around established R packages for graphics and HTML table presentation (ggplot2, kableExtra, stargazer). While I developed them to support analysis steps that are common with empirical archival research projects in the area of accounting and finance (which happens to be my field), I hope that they are generally useful for exploratory data analysis.</p>
-<p>To see what ExPanDaR has to offer, let’s take a quick tour. For more detailed guidance on how to use a specific function presented below, take a look at the respective function’s help page.</p>
-<div id="data-preparation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#data-preparation" class="anchor"></a>Data Preparation</h2>
-<p>ExPanDaR is designed for exploratory panel data analysis (hence the name). Thus, while you can also use some functions on cross-sectional data, for most functions you will need a data frame containing your panel data. ExPanDaR expects the data to be organized in long format. This implies that each observation (a row) is identified by cross-sectional and time series identifiers and that variables are organized by columns. While you can have a vector of variables jointly determining the cross-section, the time-series needs to be identified by a unique variable. The ExPanDaR functions treat cross-sectional identifiers as factors and expect the time-series identifier to be coercible into an ordered factor.</p>
-<p>For this walk-through I will use the data set russell_3000, which comes with the package. It contains some financial reporting and stock return data of Russell 3000 firms from Google Finance and Yahoo Finance and has been collected using the tidyquant package in the summer of 2017. A word of caution: While the data appears to be relatively decent quality I would advise against using this data for scientific work without verifying its integrity first. These are the variables included in the data.</p>
+<p>While the main purpose of the ExPanDaR package is to provide the
+infrastructure for the ExPanD app, the auxiliary functions of the
+package can also be used to support your exploratory data analysis
+workflow in your own code. All functions are relatively thin wrappers
+around established R packages for graphics and HTML table presentation
+(ggplot2, kableExtra, stargazer). While I developed them to support
+analysis steps that are common with empirical archival research projects
+in the area of accounting and finance (which happens to be my field), I
+hope that they are generally useful for exploratory data analysis.</p>
+<p>To see what ExPanDaR has to offer, let’s take a quick tour. For more
+detailed guidance on how to use a specific function presented below,
+take a look at the respective function’s help page.</p>
+<div class="section level2">
+<h2 id="data-preparation">Data Preparation<a class="anchor" aria-label="anchor" href="#data-preparation"></a>
+</h2>
+<p>ExPanDaR is designed for exploratory panel data analysis (hence the
+name). Thus, while you can also use some functions on cross-sectional
+data, for most functions you will need a data frame containing your
+panel data. ExPanDaR expects the data to be organized in long format.
+This implies that each observation (a row) is identified by
+cross-sectional and time series identifiers and that variables are
+organized by columns. While you can have a vector of variables jointly
+determining the cross-section, the time-series needs to be identified by
+a unique variable. The ExPanDaR functions treat cross-sectional
+identifiers as factors and expect the time-series identifier to be
+coercible into an ordered factor.</p>
+<p>For this walk-through I will use the data set russell_3000, which
+comes with the package. It contains some financial reporting and stock
+return data of Russell 3000 firms from Google Finance and Yahoo Finance
+and has been collected using the tidyquant package in the summer of
+2017. A word of caution: While the data appears to be relatively decent
+quality I would advise against using this data for scientific work
+without verifying its integrity first. These are the variables included
+in the data.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">kable</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>Variable<span class="op">=</span><span class="va">russell_3000_data_def</span><span class="op">$</span><span class="va">var_name</span>, 
-                 Definition<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">sub</a></span><span class="op">(</span><span class="st">'$'</span>, <span class="st">'\\$'</span>, <span class="va">russell_3000_data_def</span><span class="op">$</span><span class="va">var_def</span>, fixed <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>, 
-      row.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">kable</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>Variable<span class="op">=</span><span class="va">russell_3000_data_def</span><span class="op">$</span><span class="va">var_name</span>, </span>
+<span>                 Definition<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">sub</a></span><span class="op">(</span><span class="st">'$'</span>, <span class="st">'\\$'</span>, <span class="va">russell_3000_data_def</span><span class="op">$</span><span class="va">var_def</span>, fixed <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>      row.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <thead><tr>
 <th style="text-align:left;">
@@ -276,7 +291,8 @@ Return on equity (net income divided by average equity)
 roa
 </td>
 <td style="text-align:left;">
-Return on assets (earnings before interest and taxes divided by average equity)
+Return on assets (earnings before interest and taxes divided by average
+equity)
 </td>
 </tr>
 <tr>
@@ -337,33 +353,60 @@ Stock return of the period (%)
 </tr>
 </tbody>
 </table>
-<p>You can infer from the variable definition that <code>coid</code> seems to identify the cross-section (a Russell 3000 firm) while <code>period</code> identifies the time-series (a fiscal year). In addition, <code>coname</code> also sounds like it mighty identify a firm but we cannot be sure whether there are duplicate company names. In addition, we want to verify that there are no duplicate <code>coid</code>/<code>period</code> pairs. Let’s check.</p>
+<p>You can infer from the variable definition that <code>coid</code>
+seems to identify the cross-section (a Russell 3000 firm) while
+<code>period</code> identifies the time-series (a fiscal year). In
+addition, <code>coname</code> also sounds like it mighty identify a firm
+but we cannot be sure whether there are duplicate company names. In
+addition, we want to verify that there are no duplicate
+<code>coid</code>/<code>period</code> pairs. Let’s check.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">cs_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">[</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"coname"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/identical.html">identical</a></span><span class="op">(</span><span class="va">cs_ids</span><span class="op">$</span><span class="va">coid</span>, <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">$</span><span class="va">coid</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
+<code class="sourceCode R"><span><span class="va">cs_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">[</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"coname"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/identical.html" class="external-link">identical</a></span><span class="op">(</span><span class="va">cs_ids</span><span class="op">$</span><span class="va">coid</span>, <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">$</span><span class="va">coid</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] TRUE</span></span></code></pre>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/identical.html">identical</a></span><span class="op">(</span><span class="va">cs_ids</span><span class="op">$</span><span class="va">coname</span>, <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">$</span><span class="va">coname</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-<p>The first test verifies that there are no two observations that share the same <code>coid</code> but a different <code>coname</code>. The second makes sure that there are firms with the same <code>coname</code> but a different <code>coid</code>. Thus, we can use both, <code>coname</code> and <code>coid</code>, or either as cross-sectional identifier.</p>
-<p>The following test establishes whether in combination <code>coid</code> and <code>period</code> identify a panel observation.</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/identical.html" class="external-link">identical</a></span><span class="op">(</span><span class="va">cs_ids</span><span class="op">$</span><span class="va">coname</span>, <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">$</span><span class="va">coname</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] TRUE</span></span></code></pre>
+<p>The first test verifies that there are no two observations that share
+the same <code>coid</code> but a different <code>coname</code>. The
+second makes sure that there are firms with the same <code>coname</code>
+but a different <code>coid</code>. Thus, we can use both,
+<code>coname</code> and <code>coid</code>, or either as cross-sectional
+identifier.</p>
+<p>The following test establishes whether in combination
+<code>coid</code> and <code>period</code> identify a panel
+observation.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html">duplicated</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">[</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/any.html" class="external-link">any</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html" class="external-link">duplicated</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">[</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] FALSE</span></span></code></pre>
 <p>This seems to be the case.</p>
-<p>As a next step, let’s use ExPanDaR’s function <code><a href="../reference/prepare_missing_values_graph.html">prepare_missing_values_graph()</a></code> to eyeball how frequently observations are missing in the data set.</p>
+<p>As a next step, let’s use ExPanDaR’s function
+<code><a href="../reference/prepare_missing_values_graph.html">prepare_missing_values_graph()</a></code> to eyeball how frequently
+observations are missing in the data set.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/prepare_missing_values_graph.html">prepare_missing_values_graph</a></span><span class="op">(</span><span class="va">russell_3000</span>, ts_id <span class="op">=</span> <span class="st">"period"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/prepare_missing_values_graph.html">prepare_missing_values_graph</a></span><span class="op">(</span><span class="va">russell_3000</span>, ts_id <span class="op">=</span> <span class="st">"period"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## Warning: `gather_()` was deprecated in tidyr 1.2.0.</span></span>
+<span><span class="co">## <span style="color: #00BBBB;">ℹ</span> Please use `gather()` instead.</span></span>
+<span><span class="co">## <span style="color: #00BBBB;">ℹ</span> The deprecated feature was likely used in the <span style="color: #0000BB;">ExPanDaR</span> package.</span></span>
+<span><span class="co">##   Please report the issue at <span style="color: #0000BB; font-style: italic;">&lt;https://github.com/trr266/ExPanDaR/issues&gt;</span>.</span></span>
+<span><span class="co">## <span style="color: #555555;">This warning is displayed once every 8 hours.</span></span></span>
+<span><span class="co">## <span style="color: #555555;">Call `lifecycle::last_lifecycle_warnings()` to see where this warning was</span></span></span>
+<span><span class="co">## <span style="color: #555555;">generated.</span></span></span></code></pre>
 <p><img src="ExPanDaR-functions_files/figure-html/missing_obs-1.png" width="576" style="display: block; margin: auto;"></p>
-<p>OK. This does not look too bad. Only FY2013 seems odd, as some variables are completely missing. Guess why? They are calculated using lagged values of total assets. So, in the following, let’s focus on the variables that we care about and on the fiscal years 2014 to 2016 (a short panel, I know). Time to check the descriptive statistics using the <code><a href="../reference/prepare_descriptive_table.html">prepare_descriptive_table()</a></code> function.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">r3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/droplevels.html">droplevels</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">[</span><span class="va">russell_3000</span><span class="op">$</span><span class="va">period</span> <span class="op">&gt;</span> <span class="st">"FY2013"</span>,
-                              <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"coname"</span>, <span class="st">"period"</span>, <span class="st">"sector"</span>, <span class="st">"toas"</span>,
-                                <span class="st">"nioa"</span>, <span class="st">"cfoa"</span>, <span class="st">"accoa"</span>, <span class="st">"return"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>
-<span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_descriptive_table.html">prepare_descriptive_table</a></span><span class="op">(</span><span class="va">r3</span><span class="op">)</span>
-<span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span>  <span class="op">%&gt;%</span>
-  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></code></pre></div>
-<table class="table table table-condensed">
+<p>OK. This does not look too bad. Only FY2013 seems odd, as some
+variables are completely missing. Guess why? They are calculated using
+lagged values of total assets. So, in the following, let’s focus on the
+variables that we care about and on the fiscal years 2014 to 2016 (a
+short panel, I know). Time to check the descriptive statistics using the
+<code><a href="../reference/prepare_descriptive_table.html">prepare_descriptive_table()</a></code> function.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">r3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/droplevels.html" class="external-link">droplevels</a></span><span class="op">(</span><span class="va">russell_3000</span><span class="op">[</span><span class="va">russell_3000</span><span class="op">$</span><span class="va">period</span> <span class="op">&gt;</span> <span class="st">"FY2013"</span>,</span>
+<span>                              <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"coname"</span>, <span class="st">"period"</span>, <span class="st">"sector"</span>, <span class="st">"toas"</span>,</span>
+<span>                                <span class="st">"nioa"</span>, <span class="st">"cfoa"</span>, <span class="st">"accoa"</span>, <span class="st">"return"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_descriptive_table.html">prepare_descriptive_table</a></span><span class="op">(</span><span class="va">r3</span><span class="op">)</span></span>
+<span><span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span>  <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></span></code></pre></div>
+<table class="table table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 Descriptive Statistics
 </caption>
@@ -543,12 +586,17 @@ return
 </tr>
 </tbody>
 </table>
-<p>Take a look at the minima and the maxima of some of the variables (e.g., net income over assets (<code>nioa</code>)). Normally, it should be around -50 % to + 50%. Our measure has a minimum way below -50 %. One thing that comes very handy when dealing with outliers is a quick way to observe extreme values. <code><a href="../reference/prepare_ext_obs_table.html">prepare_ext_obs_table()</a></code> might be helpful here.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_ext_obs_table.html">prepare_ext_obs_table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">r3</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"coname"</span>, <span class="st">"period"</span>, <span class="st">"nioa"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>
-<span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span> <span class="op">%&gt;%</span>
-  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></code></pre></div>
-<table class="table table table-condensed">
+<p>Take a look at the minima and the maxima of some of the variables
+(e.g., net income over assets (<code>nioa</code>)). Normally, it should
+be around -50 % to + 50%. Our measure has a minimum way below -50 %. One
+thing that comes very handy when dealing with outliers is a quick way to
+observe extreme values. <code><a href="../reference/prepare_ext_obs_table.html">prepare_ext_obs_table()</a></code> might be
+helpful here.</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_ext_obs_table.html">prepare_ext_obs_table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="va">r3</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"coname"</span>, <span class="st">"period"</span>, <span class="st">"nioa"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></span></code></pre></div>
+<table class="table table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
 coname
@@ -684,13 +732,18 @@ FY2014
 </tr>
 </tbody>
 </table>
-<p>In a real life research situation, you might want to take a break and check your data as well as the actual financial statements to see what is going on. In most cases, you will see that the outliers are caused by very small denominators (average total assets in this case). To reduce the effect of these outliers on your analysis, you can winsorize (or truncate) them by using the <code><a href="../reference/treat_outliers.html">treat_outliers()</a></code> function.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">r3win</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/treat_outliers.html">treat_outliers</a></span><span class="op">(</span><span class="va">r3</span>, percentile <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span>
-<span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_ext_obs_table.html">prepare_ext_obs_table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"coname"</span>, <span class="st">"period"</span>, <span class="st">"nioa"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>
-<span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span> <span class="op">%&gt;%</span>
-  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></code></pre></div>
-<table class="table table table-condensed">
+<p>In a real life research situation, you might want to take a break and
+check your data as well as the actual financial statements to see what
+is going on. In most cases, you will see that the outliers are caused by
+very small denominators (average total assets in this case). To reduce
+the effect of these outliers on your analysis, you can winsorize (or
+truncate) them by using the <code><a href="../reference/treat_outliers.html">treat_outliers()</a></code> function.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">r3win</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/treat_outliers.html">treat_outliers</a></span><span class="op">(</span><span class="va">r3</span>, percentile <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span></span>
+<span><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_ext_obs_table.html">prepare_ext_obs_table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"coname"</span>, <span class="st">"period"</span>, <span class="st">"nioa"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></span></code></pre></div>
+<table class="table table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;">
 coname
@@ -827,15 +880,16 @@ FY2016
 </tbody>
 </table>
 </div>
-<div id="descriptive-statistics" class="section level2">
-<h2 class="hasAnchor">
-<a href="#descriptive-statistics" class="anchor"></a>Descriptive Statistics</h2>
-<p>This looks better. Let’s look at the winsorized descriptive statistics.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_descriptive_table.html">prepare_descriptive_table</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">)</span>
-<span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span>  <span class="op">%&gt;%</span>
-  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></code></pre></div>
-<table class="table table table-condensed">
+<div class="section level2">
+<h2 id="descriptive-statistics">Descriptive Statistics<a class="anchor" aria-label="anchor" href="#descriptive-statistics"></a>
+</h2>
+<p>This looks better. Let’s look at the winsorized descriptive
+statistics.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_descriptive_table.html">prepare_descriptive_table</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">)</span></span>
+<span><span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span>  <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></span></code></pre></div>
+<table class="table table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 Descriptive Statistics
 </caption>
@@ -1015,12 +1069,15 @@ return
 </tr>
 </tbody>
 </table>
-<p>I am sure that you won’t care but I am a big fan of correlation tables. <code><a href="../reference/prepare_correlation_table.html">prepare_correlation_table()</a></code> prepares a table reporting Pearson correlations above and Spearman correlations below the diagonal.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">t</span><span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_correlation_table.html">prepare_correlation_table</a></span><span class="op">(</span><span class="va">r3win</span>, bold <span class="op">=</span> <span class="fl">0.01</span>, format<span class="op">=</span><span class="st">"html"</span><span class="op">)</span>
-<span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span> <span class="op">%&gt;%</span>
-  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></code></pre></div>
-<table class="table table table-condensed">
+<p>I am sure that you won’t care but I am a big fan of correlation
+tables. <code><a href="../reference/prepare_correlation_table.html">prepare_correlation_table()</a></code> prepares a table
+reporting Pearson correlations above and Spearman correlations below the
+diagonal.</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">t</span><span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_correlation_table.html">prepare_correlation_table</a></span><span class="op">(</span><span class="va">r3win</span>, bold <span class="op">=</span> <span class="fl">0.01</span>, format<span class="op">=</span><span class="st">"html"</span><span class="op">)</span></span>
+<span><span class="va">t</span><span class="op">$</span><span class="va">kable_ret</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">kable_styling</span><span class="op">(</span><span class="st">"condensed"</span>, full_width <span class="op">=</span> <span class="cn">F</span>, position <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></span></code></pre></div>
+<table style="NAborder-bottom: 0; width: auto !important; margin-left: auto; margin-right: auto;" class="table table table-condensed">
 <thead><tr>
 <th style="text-align:left;">
 </th>
@@ -1139,60 +1196,81 @@ E: return
 </tbody>
 <tfoot><tr>
 <td style="padding: 0; " colspan="100%">
-<sup></sup> This table reports Pearson correlations above and Spearman correlations below the diagonal. The number of observations ranges from 6002 to 6643. Correlations with significance levels below 1% appear in bold print.
+<sup></sup> This table reports Pearson correlations above and Spearman
+correlations below the diagonal. The number of observations ranges from
+6002 to 6643. Correlations with significance levels below 1% appear in
+bold print.
 </td>
 </tr></tfoot>
 </table>
-<p>In fact, I like correlations so much that especially for samples containing many variables I use <code><a href="../reference/prepare_correlation_graph.html">prepare_correlation_graph()</a></code> to display a graphic variant based on the corrplot package. See for yourself.</p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ret</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_correlation_graph.html">prepare_correlation_graph</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">)</span></code></pre></div>
+<p>In fact, I like correlations so much that especially for samples
+containing many variables I use <code><a href="../reference/prepare_correlation_graph.html">prepare_correlation_graph()</a></code>
+to display a graphic variant based on the corrplot package. See for
+yourself.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">ret</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_correlation_graph.html">prepare_correlation_graph</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">)</span></span></code></pre></div>
 <p><img src="ExPanDaR-functions_files/figure-html/correlation_graph-1.png" width="384" style="display: block; margin: auto;"></p>
 </div>
-<div id="visuals" class="section level2">
-<h2 class="hasAnchor">
-<a href="#visuals" class="anchor"></a>Visuals</h2>
-<p>Additional visuals are available for exploring time trends. <code><a href="../reference/prepare_trend_graph.html">prepare_trend_graph()</a></code> can be used for comparing variables…</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_trend_graph.html">prepare_trend_graph</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"period"</span>, <span class="st">"nioa"</span>, <span class="st">"cfoa"</span>, <span class="st">"accoa"</span><span class="op">)</span><span class="op">]</span>, <span class="st">"period"</span><span class="op">)</span>
-<span class="va">graph</span><span class="op">$</span><span class="va">plot</span></code></pre></div>
-<p><img src="ExPanDaR-functions_files/figure-html/time_trend_plot-1.png" width="576" style="display: block; margin: auto;"></p>
-<p>… and for eyeballing the distributional properties of a single variable over time you have <code><a href="../reference/prepare_quantile_trend_graph.html">prepare_quantile_trend_graph()</a></code>.</p>
+<div class="section level2">
+<h2 id="visuals">Visuals<a class="anchor" aria-label="anchor" href="#visuals"></a>
+</h2>
+<p>Additional visuals are available for exploring time trends.
+<code><a href="../reference/prepare_trend_graph.html">prepare_trend_graph()</a></code> can be used for comparing
+variables…</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_quantile_trend_graph.html">prepare_quantile_trend_graph</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"period"</span>, <span class="st">"return"</span><span class="op">)</span><span class="op">]</span>, <span class="st">"period"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">0.95</span><span class="op">)</span><span class="op">)</span>
-<span class="va">graph</span><span class="op">$</span><span class="va">plot</span></code></pre></div>
-<p><img src="ExPanDaR-functions_files/figure-html/quantile_plot-1.png" width="576" style="display: block; margin: auto;"></p>
-<p>Nothing special going on here (not really surprising, given the short time span that the sample covers). Let’s see how profitability varies across sectors by using the<br><code><a href="../reference/prepare_by_group_trend_graph.html">prepare_by_group_trend_graph()</a></code> function.</p>
+<code class="sourceCode R"><span><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_trend_graph.html">prepare_trend_graph</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"period"</span>, <span class="st">"nioa"</span>, <span class="st">"cfoa"</span>, <span class="st">"accoa"</span><span class="op">)</span><span class="op">]</span>, <span class="st">"period"</span><span class="op">)</span></span>
+<span><span class="va">graph</span><span class="op">$</span><span class="va">plot</span></span></code></pre></div>
+<p><img src="ExPanDaR-functions_files/figure-html/time_trend_plot-1.png" width="576" style="display: block; margin: auto;"></p>
+<p>… and for eyeballing the distributional properties of a single
+variable over time you have
+<code><a href="../reference/prepare_quantile_trend_graph.html">prepare_quantile_trend_graph()</a></code>.</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_by_group_trend_graph.html">prepare_by_group_trend_graph</a></span><span class="op">(</span><span class="va">r3win</span>, <span class="st">"period"</span>, <span class="st">"sector"</span>, <span class="st">"nioa"</span><span class="op">)</span>
-<span class="va">graph</span><span class="op">$</span><span class="va">plot</span></code></pre></div>
-<p><img src="ExPanDaR-functions_files/figure-html/bgtg_plot-1.png" width="576" style="display: block; margin: auto;"></p>
-<p>The health sector is clearly less profitable compared to the others, which can be explained by small growing firms. Finally, <code><a href="../reference/prepare_scatter_plot.html">prepare_scatter_plot()</a></code> produces the mother of all plots, the scatter plot.</p>
+<code class="sourceCode R"><span><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_quantile_trend_graph.html">prepare_quantile_trend_graph</a></span><span class="op">(</span><span class="va">r3win</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"period"</span>, <span class="st">"return"</span><span class="op">)</span><span class="op">]</span>, <span class="st">"period"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">0.95</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">graph</span><span class="op">$</span><span class="va">plot</span></span></code></pre></div>
+<p><img src="ExPanDaR-functions_files/figure-html/quantile_plot-1.png" width="576" style="display: block; margin: auto;"></p>
+<p>Nothing special going on here (not really surprising, given the short
+time span that the sample covers). Let’s see how profitability varies
+across sectors by using the<br><code><a href="../reference/prepare_by_group_trend_graph.html">prepare_by_group_trend_graph()</a></code> function.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/prepare_scatter_plot.html">prepare_scatter_plot</a></span><span class="op">(</span><span class="va">r3win</span>, x<span class="op">=</span><span class="st">"nioa"</span>, y<span class="op">=</span><span class="st">"return"</span>, color<span class="op">=</span><span class="st">"sector"</span>, size<span class="op">=</span><span class="st">"toas"</span>, loess <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'</code></pre>
+<code class="sourceCode R"><span><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_by_group_trend_graph.html">prepare_by_group_trend_graph</a></span><span class="op">(</span><span class="va">r3win</span>, <span class="st">"period"</span>, <span class="st">"sector"</span>, <span class="st">"nioa"</span><span class="op">)</span></span>
+<span><span class="va">graph</span><span class="op">$</span><span class="va">plot</span></span></code></pre></div>
+<p><img src="ExPanDaR-functions_files/figure-html/bgtg_plot-1.png" width="576" style="display: block; margin: auto;"></p>
+<p>The health sector is clearly less profitable compared to the others,
+which can be explained by small growing firms. Finally,
+<code><a href="../reference/prepare_scatter_plot.html">prepare_scatter_plot()</a></code> produces the mother of all plots,
+the scatter plot.</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/prepare_scatter_plot.html">prepare_scatter_plot</a></span><span class="op">(</span><span class="va">r3win</span>, x<span class="op">=</span><span class="st">"nioa"</span>, y<span class="op">=</span><span class="st">"return"</span>, color<span class="op">=</span><span class="st">"sector"</span>, size<span class="op">=</span><span class="st">"toas"</span>, loess <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## `geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = "cs")'</span></span></code></pre>
 <p><img src="ExPanDaR-functions_files/figure-html/scatter_plot-1.png" width="672" style="display: block; margin: auto;"></p>
-<p>Do you see the structural break around nioa == 0? Researchers in the area of accounting tend to like that kind of stuff.</p>
+<p>Do you see the structural break around nioa == 0? Researchers in the
+area of accounting tend to like that kind of stuff.</p>
 </div>
-<div id="regression-tables" class="section level2">
-<h2 class="hasAnchor">
-<a href="#regression-tables" class="anchor"></a>Regression Tables</h2>
-<p>Finally, if you happen to be a fan of starred numbers, you can also quickly produce regression tables by using the function <code><a href="../reference/prepare_regression_table.html">prepare_regression_table()</a></code> that calls <code><a href="https://rdrr.io/pkg/lfe/man/felm.html">lfe::felm()</a></code> for OLS and <code><a href="https://rdrr.io/r/stats/glm.html">glm()</a></code> for binary logit models. The tables are then constructed by calling <code><a href="https://rdrr.io/pkg/stargazer/man/stargazer.html">stargazer::stargazer()</a></code>, allowing for plain text, html and latex output.</p>
+<div class="section level2">
+<h2 id="regression-tables">Regression Tables<a class="anchor" aria-label="anchor" href="#regression-tables"></a>
+</h2>
+<p>Finally, if you happen to be a fan of starred numbers, you can also
+quickly produce regression tables by using the function
+<code><a href="../reference/prepare_regression_table.html">prepare_regression_table()</a></code> that calls
+<code><a href="https://rdrr.io/pkg/lfe/man/felm.html" class="external-link">lfe::felm()</a></code> for OLS and <code><a href="https://rdrr.io/r/stats/glm.html" class="external-link">glm()</a></code> for binary logit
+models. The tables are then constructed by calling
+<code><a href="https://rdrr.io/pkg/stargazer/man/stargazer.html" class="external-link">stargazer::stargazer()</a></code>, allowing for plain text, html and
+latex output.</p>
 <p>You can construct tables by mixing different models…</p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">dvs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"return"</span>, <span class="st">"return"</span>, <span class="st">"return"</span>, <span class="st">"return"</span>, <span class="st">"return"</span>, <span class="st">"return"</span><span class="op">)</span>
-<span class="va">idvs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"nioa"</span><span class="op">)</span>, 
-             <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"cfoa"</span><span class="op">)</span>, 
-             <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"accoa"</span><span class="op">)</span>, 
-             <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"cfoa"</span>, <span class="st">"accoa"</span><span class="op">)</span>, 
-             <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"nioa"</span>, <span class="st">"accoa"</span><span class="op">)</span>, 
-             <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"nioa"</span>, <span class="st">"accoa"</span><span class="op">)</span><span class="op">)</span> 
-<span class="va">feffects</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"period"</span>, <span class="st">"period"</span>, <span class="st">"period"</span>, 
-                 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span><span class="op">)</span>
-<span class="va">clusters</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">"coid"</span>, <span class="st">"coid"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span><span class="op">)</span>
-<span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_regression_table.html">prepare_regression_table</a></span><span class="op">(</span><span class="va">r3win</span>, <span class="va">dvs</span>, <span class="va">idvs</span>, <span class="va">feffects</span>, <span class="va">clusters</span><span class="op">)</span>
-<span class="fu">htmltools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/HTML.html">HTML</a></span><span class="op">(</span><span class="va">t</span><span class="op">$</span><span class="va">table</span><span class="op">)</span></code></pre></div>
-<p></p>
-<table class="table">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dvs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"return"</span>, <span class="st">"return"</span>, <span class="st">"return"</span>, <span class="st">"return"</span>, <span class="st">"return"</span>, <span class="st">"return"</span><span class="op">)</span></span>
+<span><span class="va">idvs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"nioa"</span><span class="op">)</span>, </span>
+<span>             <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cfoa"</span><span class="op">)</span>, </span>
+<span>             <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"accoa"</span><span class="op">)</span>, </span>
+<span>             <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cfoa"</span>, <span class="st">"accoa"</span><span class="op">)</span>, </span>
+<span>             <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"nioa"</span>, <span class="st">"accoa"</span><span class="op">)</span>, </span>
+<span>             <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"nioa"</span>, <span class="st">"accoa"</span><span class="op">)</span><span class="op">)</span> </span>
+<span><span class="va">feffects</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">"period"</span>, <span class="st">"period"</span>, <span class="st">"period"</span>, </span>
+<span>                 <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">clusters</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">"coid"</span>, <span class="st">"coid"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"coid"</span>, <span class="st">"period"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_regression_table.html">prepare_regression_table</a></span><span class="op">(</span><span class="va">r3win</span>, <span class="va">dvs</span>, <span class="va">idvs</span>, <span class="va">feffects</span>, <span class="va">clusters</span><span class="op">)</span></span>
+<span><span class="fu">htmltools</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/htmltools/reference/HTML.html" class="external-link">HTML</a></span><span class="op">(</span><span class="va">t</span><span class="op">$</span><span class="va">table</span><span class="op">)</span></span></code></pre></div>
+ <table style="text-align:center" class="table">
 <tr><td colspan="7" style="border-bottom: 1px solid black"></td></tr>
 <tr>
 <td style="text-align:left"></td>
@@ -1371,15 +1449,14 @@ E: return
 <tr>
 <td style="text-align:left"><em>Note:</em></td>
 <td colspan="6" style="text-align:right">
-<sup>*</sup>p&lt;0.1; <sup>**</sup>p&lt;0.05; <sup>***</sup>p&lt;0.01</td>
+<sup>*</sup>p**p***p</td>
 </tr>
 </table>
 <p>… or by applying one model on different sub-samples.</p>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_regression_table.html">prepare_regression_table</a></span><span class="op">(</span><span class="va">r3win</span>, <span class="st">"return"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"nioa"</span>, <span class="st">"accoa"</span><span class="op">)</span>, byvar<span class="op">=</span><span class="st">"period"</span><span class="op">)</span>
-<span class="fu">htmltools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/HTML.html">HTML</a></span><span class="op">(</span><span class="va">t</span><span class="op">$</span><span class="va">table</span><span class="op">)</span></code></pre></div>
-<p></p>
-<table class="table">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prepare_regression_table.html">prepare_regression_table</a></span><span class="op">(</span><span class="va">r3win</span>, <span class="st">"return"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"nioa"</span>, <span class="st">"accoa"</span><span class="op">)</span>, byvar<span class="op">=</span><span class="st">"period"</span><span class="op">)</span></span>
+<span><span class="fu">htmltools</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/htmltools/reference/HTML.html" class="external-link">HTML</a></span><span class="op">(</span><span class="va">t</span><span class="op">$</span><span class="va">table</span><span class="op">)</span></span></code></pre></div>
+ <table style="text-align:center" class="table">
 <tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr>
 <tr>
 <td style="text-align:left"></td>
@@ -1529,40 +1606,40 @@ E: return
 <tr>
 <td style="text-align:left"><em>Note:</em></td>
 <td colspan="4" style="text-align:right">
-<sup>*</sup>p&lt;0.1; <sup>**</sup>p&lt;0.05; <sup>***</sup>p&lt;0.01</td>
+<sup>*</sup>p**p***p</td>
 </tr>
 </table>
 </div>
-<div id="conclusion" class="section level2">
-<h2 class="hasAnchor">
-<a href="#conclusion" class="anchor"></a>Conclusion</h2>
-<p>This is all there is (currently). All these functions are rather simple wrappers around established R functions. They can easily be modified to fit your needs and taste. Take look at the <a href="https://github.com/joachim-gassen/ExPanDaR">github repository of the ExPanDaR package</a> for the code. Have fun!</p>
+<div class="section level2">
+<h2 id="conclusion">Conclusion<a class="anchor" aria-label="anchor" href="#conclusion"></a>
+</h2>
+<p>This is all there is (currently). All these functions are rather
+simple wrappers around established R functions. They can easily be
+modified to fit your needs and taste. Take look at the <a href="https://github.com/joachim-gassen/ExPanDaR" class="external-link">github repository of
+the ExPanDaR package</a> for the code. Have fun!</p>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p>Developed by Joachim Gassen.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by Joachim Gassen.</p>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>

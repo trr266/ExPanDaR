@@ -1,10 +1,10 @@
-pandoc: 2.11.2
-pkgdown: 1.6.1
+pandoc: '3.2'
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   ExPanD_notebook: ExPanD_notebook.html
   ExPanDaR-functions: ExPanDaR-functions.html
   customize_ExPanD: customize_ExPanD.html
   use_ExPanD: use_ExPanD.html
-last_built: 2021-04-11T09:31Z
+last_built: 2025-04-06T11:46Z
 
