@@ -1,6 +1,6 @@
 # Code to generate the shinyapps.io applications
 # Deploy on MacOS (seems to be less prone to stupid locale and enconding issues)
-devtools::install_github("joachim-gassen/ExPanDaR")
+devtools::install_github("trr266/ExPanDaR")
 
 # --- expand -------------------------------------------------------------------
 
@@ -225,7 +225,7 @@ abstract <- paste(
         "across time and other dimensions.",
         "<br>&nbsp;<br>",
         "It is based on the 'ExPanD' display provided by the",
-        "<a href=https://joachim-gassen.github.io/ExPanDaR>'ExPanDaR' package</a>.",
+        "<a href=https://trr266.github.io/ExPanDaR>'ExPanDaR' package</a>.",
         "Click <a href=https://jgassen.shinyapps.io/expand>here</a> to explore your",
         "own data with 'ExPanD'.",
         "<br>&nbsp;<br>",

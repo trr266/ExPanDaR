@@ -45,7 +45,7 @@ ExPanD supports Stata, SAS, CSV, Excel and R file formats.
 For using ExPanD from within R, you have to install the ExPanDaR package and start ExPanD.
 
 ``` {r expand_file, eval = FALSE}
-devtools::install_github("joachim-gassen/ExPanDaR")
+devtools::install_github("trr266/ExPanDaR")
 library(ExPanDaR)
 
 ExPanD()
@@ -85,7 +85,7 @@ any(duplicated(gapminder[,c("country", "year")]))
 
 OK. Use the commented-out `write.csv()` function call above to save the CSV file to your system and the file dialog to load it into ExPanD 
 (if you are not using R, you can download the CSV file 
-[here](https://github.com/joachim-gassen/ExPanDaR/raw/master/vignettes/data/gapminder.csv)).
+[here](https://github.com/trr266/ExPanDaR/raw/master/vignettes/data/gapminder.csv)).
 After uploading the file, two dialog boxes will appear asking you to select the cross-sectional identifier(s)
 and the time-series identifier.
 
@@ -102,7 +102,7 @@ Alternatively, if you are using R you can bypass the file upload dialog by speci
 as well as time-series identifiers.
 
 ``` {r expand_simple, eval = FALSE}
-devtools::install_github("joachim-gassen/ExPanDaR")
+devtools::install_github("trr266/ExPanDaR")
 library(ExPanDaR)
 library(gapminder)
 

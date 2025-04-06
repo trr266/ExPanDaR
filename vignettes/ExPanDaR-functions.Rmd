@@ -200,5 +200,5 @@ htmltools::HTML(t$table)
 This is all there is (currently).
 All these functions are rather simple wrappers around established R functions. 
 They can easily be modified to fit your needs and taste. 
-Take look at the [github repository of the ExPanDaR package](https://github.com/joachim-gassen/ExPanDaR) for the code.
+Take look at the [github repository of the ExPanDaR package](https://github.com/trr266/ExPanDaR) for the code.
 Have fun!

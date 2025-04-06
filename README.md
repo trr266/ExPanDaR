@@ -68,7 +68,7 @@ Or, if you want to install the current development version from Github:
 if (!require("devtools")) {
   install.packages("devtools")
 }
-devtools::install_github("joachim-gassen/ExPanDaR")
+devtools::install_github("trr266/ExPanDaR")
 library(ExPanDaR)
 ```
 
@@ -119,15 +119,15 @@ code file `ExPanDaR_examples.R` in the root directory.
 Besides providing the ExPanD app, ExPanDaR comes with a set of functions
 that might be helpful in your own exploratory data analysis workflow,
 e.g., functions to quickly produce standard tables and plots. See [this
-vignette](https://joachim-gassen.github.io/ExPanDaR/articles/ExPanDaR-functions.html)
+vignette](https://trr266.github.io/ExPanDaR/articles/ExPanDaR-functions.html)
 for a quick walk-trough.
 
 ## Further Information
 
 For further information, please refer to the articles and function call
 references of the package documentation, available
-[here](https://joachim-gassen.github.io/ExPanDaR) for the CRAN version
-and [here](https://joachim-gassen.github.io/ExPanDaR/dev) for the
+[here](https://trr266.github.io/ExPanDaR) for the CRAN version
+and [here](https://trr266.github.io/ExPanDaR/dev) for the
 current development version.
 
 Enjoy\!
